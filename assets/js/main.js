@@ -40,6 +40,8 @@
         const body = document.body;
 
         const updateHeader = () => {
+            if (body.classList.contains('menu-open')) return;
+
             const currentScroll = window.scrollY;
 
             if (currentScroll <= 80) {
@@ -82,6 +84,10 @@
         };
 
         const openMenu = () => {
+            if (header) {
+                header.style.transform = 'translateY(0)';
+                document.body.classList.remove('header-hidden');
+            }
             document.body.classList.add('menu-open');
             burger.setAttribute('aria-expanded', 'true');
             burger.setAttribute('aria-label', 'Fermer le menu');
