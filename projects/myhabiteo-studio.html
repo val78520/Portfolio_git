@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentin Bertinetti - MyHabiteo Studio</title>
+    <meta name="description" content="Case study : transformer un contenu 3D one-shot en source de revenus récurrents pour Habiteo.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;450;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="case">
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="../index.html" class="site-header__brand">
+                Valentin Bertinetti<span class="site-header__brand-mark"> ·</span>
+            </a>
+            <nav class="site-header__nav" aria-label="Navigation principale">
+                <a href="../design.html" class="site-header__link is-active">Design</a>
+                <a href="../photography.html" class="site-header__link site-header__link--secondary">Photographie</a>
+                <a href="../a-propos.html" class="site-header__link site-header__link--secondary">À propos</a>
+                <a href="#contact" class="site-header__link site-header__link--secondary">Contact</a>
+                <a href="#contact" class="site-header__status">
+                    <span class="site-header__status-dot"></span>
+                    <span>Disponible</span>
+                </a>
+                <button class="site-header__burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav-overlay" type="button">
+                    <span class="site-header__burger-line"></span>
+                    <span class="site-header__burger-line"></span>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Overlay menu mobile -->
+        <div class="site-header__overlay" id="site-nav-overlay" aria-hidden="true">
+            <nav class="site-header__overlay-nav" aria-label="Menu mobile">
+                <ul class="site-header__overlay-list">
+                    <li><a href="../design.html" class="site-header__overlay-link is-active"><span class="site-header__overlay-list-num">01</span>Design</a></li>
+                    <li><a href="../photography.html" class="site-header__overlay-link "><span class="site-header__overlay-list-num">02</span>Photographie</a></li>
+                    <li><a href="../a-propos.html" class="site-header__overlay-link "><span class="site-header__overlay-list-num">03</span>À propos</a></li>
+                    <li><a href="#contact" class="site-header__overlay-link"><span class="site-header__overlay-list-num">04</span>Contact</a></li>
+                </ul>
+            </nav>
+            <div class="site-header__overlay-footer">
+                <a href="mailto:val.bertinetti@gmail.com">val.bertinetti@gmail.com</a>
+                <a href="https://www.linkedin.com/in/valentin-bertinetti/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero text-first -->
+        <section class="case-hero">
+            <a href="../design.html" class="case-hero__back">
+                <svg width="14" height="10" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M9.5 1L15 6M15 6L9.5 11M15 6H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Retour aux projets
+            </a>
+
+            <div class="case-hero__eyebrow eyebrow reveal">Case study · Product Design</div>
+
+            <h1 class="case-hero__title reveal reveal-delay-1">MyHabiteo Studio</h1>
+
+            <p class="case-hero__subtitle reveal reveal-delay-2">
+                Transformer un contenu 3D one-shot en source de revenus récurrents.
+            </p>
+
+            <div class="case-hero__meta reveal reveal-delay-3">
+                <div class="case-hero__meta-item">
+                    <span class="case-hero__meta-label">Client</span>
+                    <span class="case-hero__meta-value">Habiteo</span>
+                </div>
+                <div class="case-hero__meta-item">
+                    <span class="case-hero__meta-label">Année</span>
+                    <span class="case-hero__meta-value">2022</span>
+                </div>
+                <div class="case-hero__meta-item">
+                    <span class="case-hero__meta-label">Rôle</span>
+                    <span class="case-hero__meta-value">Product Designer</span>
+                </div>
+                <div class="case-hero__meta-item">
+                    <span class="case-hero__meta-label">Durée</span>
+                    <span class="case-hero__meta-value">6 mois</span>
+                </div>
+                <div class="case-hero__meta-item">
+                    <span class="case-hero__meta-label">Équipe</span>
+                    <span class="case-hero__meta-value">Head of Product, PO, UI Designer, 2 devs</span>
+                </div>
+                <div class="case-hero__meta-item">
+                    <span class="case-hero__meta-label">Outils</span>
+                    <span class="case-hero__meta-value">Figma · Jira · GA · GTM</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cover -->
+        <div class="case-cover reveal">
+            <img class="case-cover__image" src="/Users/bertinettivalentin/Portefolio/assets/images/Studio-production.png" alt="Aperçu du module MyHabiteo Studio" />
+        </div>
+
+        <!-- TOC compact sticky -->
+        <nav class="case-toc" aria-label="Sommaire">
+            <div class="case-toc__inner">
+                <span class="case-toc__label">Sommaire</span>
+                <ul class="case-toc__list">
+                    <li><a href="#contexte" class="case-toc__link" data-toc-link>Contexte</a></li>
+                    <li><a href="#problematique" class="case-toc__link" data-toc-link>Problématique</a></li>
+                    <li><a href="#depart" class="case-toc__link" data-toc-link>Point de départ</a></li>
+                    <li><a href="#conception" class="case-toc__link" data-toc-link>Conception</a></li>
+                    <li><a href="#livraison" class="case-toc__link" data-toc-link>Livraison</a></li>
+                    <li><a href="#resultats" class="case-toc__link" data-toc-link>Résultats</a></li>
+                    <li><a href="#retro" class="case-toc__link" data-toc-link>Retro</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- 01 — Contexte -->
+        <section class="case-section" id="contexte" data-toc>
+            <div class="case-section__num reveal">01 — Le contexte</div>
+            <h2 class="case-section__title reveal reveal-delay-1">Un marché porteur, mais structurellement fragile.</h2>
+            <div class="case-prose reveal reveal-delay-2">
+                <p>En 2022, Habiteo était déjà bien établi sur le marché de la production 3D pour les promoteurs immobiliers — Kaufmann &amp; Broad comptait parmi ses clients. La 3D est un incontournable dans l'immobilier neuf : elle permet à l'acheteur de se projeter dans un quartier, un bâtiment, un logement qui n'existe pas encore.</p>
+                <p>Mais ce marché porteur avait une fragilité structurelle : <strong>le modèle était quasi exclusivement one-shot</strong>. On vendait un kit de contenus par programme, puis on repartait chercher le prochain contrat. Des revenus dépendants des cycles de vente, sans récurrence, sans visibilité.</p>
+                <p>Côté promoteurs, le problème était symétrique : une fois les contenus livrés, ils n'avaient pas les moyens de les faire vivre au quotidien sur leurs canaux digitaux. La production 3D coûte cher — même industrialisée — et commander de nouveaux rendus pour chaque post ou campagne n'était pas viable.</p>
+                <p>C'est dans ce contexte que la CEO et le Head of Product Emmanuel Dupuy ont posé la vision : <em>trouver un moyen de monétiser différemment les contenus 3D déjà produits, tout en donnant plus d'autonomie aux promoteurs</em>.</p>
+            </div>
+        </section>
+
+        <!-- Image full bleed -->
+        <figure class="case-figure case-figure--full case-figure--green reveal">
+            <div class="case-figure__media">
+                <img class="case-figure__image" src="/Users/bertinettivalentin/Portefolio/assets/images/studio-maquettes2.png" alt="Aperçu d'une visite virtuelle 3D Habiteo" loading="lazy" />
+            </div>
+            <figcaption class="case-figure__caption">Le point de départ : des contenus 3D déjà produits pour chaque programme immobilier.</figcaption>
+        </figure>
+
+        <!-- 02 — Problématique (pull quote) -->
+        <section class="case-quote" id="problematique" data-toc>
+            <div class="case-section__num reveal">02 — La problématique</div>
+            <p class="case-quote__text reveal reveal-delay-1">
+                Comment générer des revenus récurrents à partir de contenus 3D existants, tout en offrant aux promoteurs la capacité de produire eux-mêmes de nouveaux visuels&nbsp;?
+            </p>
+        </section>
+
+        <!-- 03 — Point de départ -->
+        <section class="case-section" id="depart" data-toc>
+            <div class="case-section__num reveal">03 — Le point de départ</div>
+            <h2 class="case-section__title reveal reveal-delay-1">Une innovation R&amp;D à transformer en produit.</h2>
+            <div class="case-prose reveal reveal-delay-2">
+                <p>Tout est parti d'une brique technique développée par le pôle R&amp;D : un script capable d'exporter des contenus en différentes résolutions (HD, 4K…) et selon différents points de vue (fisheye, œil humain) directement depuis les visites virtuelles 3D déjà produites.</p>
+                <p>Ce n'était pas encore un produit — c'était une <strong>capacité technique</strong>. Mon travail a été de la transformer en expérience utilisateur.</p>
+            </div>
+        </section>
+
+        <!-- 04 — Conception -->
+        <section class="case-section" id="conception" data-toc>
+            <div class="case-section__num reveal">04 — La conception</div>
+            <h2 class="case-section__title reveal reveal-delay-1">De la capacité technique à l'expérience utilisateur.</h2>
+
+            <div class="case-prose reveal reveal-delay-2">
+                <h3>Explorer les possibilités</h3>
+                <p>À partir de cette brique R&amp;D, j'ai wireframé de nombreux concepts, tous articulés autour d'une même idée : donner à l'utilisateur un outil paramétrable, lui permettant de configurer et d'exporter ses propres visuels sans dépendre de la production Habiteo.</p>
+                <p>Au fil des itérations — reviews avec le Head of Product, un autre PO et un UI Designer, puis tests de prototypes Figma en interne — les maquettes ont convergé vers une solution incluant des <em>presets adaptés aux formats des réseaux sociaux</em> : carré 1:1, 4:3, vidéo 360°, etc.</p>
+            </div>
+        </section>
+
+        <!-- 2 col grid -->
+        <div class="case-grid reveal">
+            <figure class="case-figure case-figure--sand">
+                <div class="case-figure__media">
+                    <img class="case-figure__image" src="/Users/bertinettivalentin/Portefolio/assets/images/studio-step-format.png" alt="Wireframes — Step 1, choix du format" loading="lazy" />
+                </div>
+                <figcaption class="case-figure__caption">Step 2 : Choix du format</figcaption>
+            </figure>
+            <figure class="case-figure case-figure--ivory">
+                <div class="case-figure__media">
+                    <img class="case-figure__image" src="/Users/bertinettivalentin/Portefolio/assets/images/studio-step-ux.png" alt="Wireframes — Step 2, configuration des paramètres" loading="lazy" />
+                </div>
+                <figcaption class="case-figure__caption">Step 5 : loading state et validation state</figcaption>
+            </figure>
+        </div>
+
+        <section class="case-section">
+            <div class="case-prose reveal">
+                <h3>Le parti pris UX : une expérience par étape</h3>
+                <p>J'ai fait le choix de structurer l'expérience en steps distincts, avec une seule décision demandée par écran. Ce parti pris venait de deux convictions :</p>
+                <p>D'abord, <strong>réduire la charge cognitive</strong>. Le processus de configuration impliquait plusieurs paramètres — résolution, point de vue, format — et les regrouper sur un seul écran aurait créé de la confusion plus que de l'efficacité.</p>
+                <p>Ensuite, une perspective de déploiement terrain : l'outil devait potentiellement être utilisé sur tablette par les équipes commerciales lors de leurs rendez-vous clients. Une navigation step-by-step, proche des codes du design mobile, rendait l'expérience plus fluide dans ce contexte.</p>
+                <p>J'ai également soigné l'ensemble des états de l'interface : écran de chargement, validation, écrans d'erreur ou d'état vide, et surtout un <em>end screen conçu pour inciter l'utilisateur à lancer une nouvelle exportation</em> — logique directement liée au modèle économique.</p>
+            </div>
+        </section>
+
+        <figure class="case-figure case-figure--wide case-figure--ember reveal">
+            <div class="case-figure__media">
+                <img class="case-figure__image" src="/Users/bertinettivalentin/Portefolio/assets/images/studio-steps.png" alt="Maquettes du flow complet, écran par écran" loading="lazy" />
+            </div>
+            <figcaption class="case-figure__caption">Une seule décision par écran pour réduire la charge cognitive et préparer un usage tablette en RDV client.</figcaption>
+        </figure>
+
+        <section class="case-section">
+            <div class="case-prose reveal">
+                <h3>L'approche UI : un système modulaire</h3>
+                <p>Côté UI, j'ai opté pour une architecture en module, conçue pour s'intégrer à l'interface existante d'Habiteo et être <strong>réplicable sur tous les types de 3D produits</strong>. Pas de cas spécifiques à développer, pas d'écarts de charte : le composant s'insère dans l'écosystème existant et fonctionne de façon cohérente sur tous les écrans.</p>
+
+                <h3>Le modèle économique</h3>
+                <p>Le modèle a été défini par la direction : accès au module via une licence, puis consommation d'un système de crédits dont le coût varie selon la résolution et les paramètres choisis. J'avais fait quelques propositions allant dans le sens d'un système de crédit, mais la décision finale appartenait à la gap team. L'objectif était clair : <em>inciter les clients à revenir régulièrement pour racheter des crédits</em> — d'où l'importance du end screen dans le parcours.</p>
+            </div>
+        </section>
+
+        <!-- 05 — Livraison -->
+        <section class="case-section" id="livraison" data-toc>
+            <div class="case-section__num reveal">05 — De la conception à la livraison</div>
+            <h2 class="case-section__title reveal reveal-delay-1">Du Figma au catalogue produit.</h2>
+            <div class="case-prose reveal reveal-delay-2">
+                <p>Une fois le design stabilisé, j'ai intégré Studio à la roadmap produit, rédigé les spécifications et les user stories dans Jira, et planifié les sprints avec les deux développeurs de la squad — Christophe Barreto et Aymeric Bonnet. L'équipe a livré un travail remarquable. Après une phase de recette et des tests, le produit est passé en production <strong>quelques semaines avant le RENT</strong>.</p>
+            </div>
+        </section>
+
+        <!-- 06 — Stats -->
+        <section class="case-stats" id="resultats" data-toc>
+            <div class="case-stats__inner">
+                <div class="case-stats__header reveal">
+                    <div class="eyebrow case-stats__eyebrow">06 — Les résultats</div>
+                    <h2 class="case-stats__title">Du concept R&amp;D à un produit présenté en conditions réelles.</h2>
+                </div>
+
+                <div class="case-stats__grid">
+                    <div class="case-stat reveal">
+                        <div class="case-stat__num">06</div>
+                        <div class="case-stat__label">Mois</div>
+                        <p class="case-stat__desc">Du début de la conception à l'intégration au catalogue officiel.</p>
+                    </div>
+                    <div class="case-stat reveal reveal-delay-1">
+                        <div class="case-stat__num">2–3</div>
+                        <div class="case-stat__label">Licences signées au RENT</div>
+                        <p class="case-stat__desc">Démonstrations live le jour du salon — un démarrage modeste mais concret pour un MVP.</p>
+                    </div>
+                    <div class="case-stat reveal reveal-delay-2">
+                        <div class="case-stat__num">03</div>
+                        <div class="case-stat__label">KPIs UX suivis</div>
+                        <p class="case-stat__desc">Temps de parcours, taux d'abandon par step, clics sur les options de configuration.</p>
+                    </div>
+                </div>
+
+                <div class="case-stats__footer reveal">
+                    <div class="case-stats__footer-label">Métriques UX suivies</div>
+                    <div class="case-stats__footer-text">
+                        <p><strong>Temps de parcours.</strong> Un temps trop long pouvait signaler une complexité non anticipée dans le flow, ou une étape mal comprise.</p>
+                        <p><strong>Taux d'abandon par step</strong> (via Google Tag Manager). Cet indicateur me permettait de localiser précisément les points de friction : un bug silencieux, une étape trop ambiguë, ou simplement un enchaînement peu naturel.</p>
+                        <p><strong>Tracking des clics sur les options de configuration.</strong> Comprendre ce qui attirait vraiment les utilisateurs (formats social media, vidéo 360°, point de vue fisheye…) pour prendre des décisions produit éclairées et investir au bon endroit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Honest follow-up on adoption -->
+        <section class="case-section">
+            <div class="case-prose reveal">
+                <p>Sur l'usage quotidien, les données disponibles avant mon départ montraient une adoption plus lente qu'espéré : les crédits s'écoulaient peu, les promoteurs produisant moins de contenus que prévu. Le produit n'a pas eu le temps d'être piloté sur la durée — Habiteo a été racheté peu après, et j'ai rejoint Renault à ce moment-là.</p>
+            </div>
+        </section>
+
+        <!-- 07 — Retro -->
+        <section class="case-section" id="retro" data-toc>
+            <div class="case-section__num reveal">07 — Ce que j'aurais fait différemment</div>
+            <h2 class="case-section__title reveal reveal-delay-1">Donner envie de revenir.</h2>
+            <div class="case-prose reveal reveal-delay-2">
+                <p>Avec le recul, je pense que l'expérience aurait pu être davantage <strong>simplifiée</strong> — certains steps auraient pu être fusionnés — pour réinvestir ce temps de développement dans la création de presets plus riches et plus directement utilisables.</p>
+                <p>La question à laquelle on n'a pas assez répondu est : <em>Comment donner envie à nos clients de revenir utiliser Studio&nbsp;?</em> J'aurais poussé plus tôt et plus fort pour intégrer des mécaniques de gamification — progression, récompenses, historique de productions — pour ancrer le comportement de réutilisation que le modèle économique nécessitait.</p>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="case-skills">
+            <div class="case-skills__label reveal">Compétences mobilisées</div>
+            <ul class="case-skills__list reveal reveal-delay-1">
+                <li class="case-skills__tag">Conception produit</li>
+                <li class="case-skills__tag">UX research</li>
+                <li class="case-skills__tag">UI Design</li>
+                <li class="case-skills__tag">Wireframing &amp; prototypage Figma</li>
+                <li class="case-skills__tag">Roadmap produit</li>
+                <li class="case-skills__tag">Spécifications &amp; user stories (Jira)</li>
+                <li class="case-skills__tag">Tracking &amp; analytics (GA, GTM)</li>
+                <li class="case-skills__tag">Agile · Sprints</li>
+                <li class="case-skills__tag">Coordination d'équipe</li>
+            </ul>
+        </section>
+
+        <!-- Next project -->
+        <section class="case-next">
+            <div class="case-next__inner">
+                <a href="habiteo-widgets.html" class="case-next__link" aria-label="Projet suivant : Habiteo Widgets">
+                    <div class="case-next__label">Projet suivant — 03 / 04</div>
+                    <h2 class="case-next__title">Habiteo Widgets</h2>
+                    <p class="case-next__subtitle">Designer un produit user-centric dans un écosystème piloté par le business. Deux ans en double casquette PO &amp; UX Designer.</p>
+                    <span class="case-next__arrow">
+                        Découvrir le projet
+                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M9.5 1L15 6M15 6L9.5 11M15 6H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="habiteo-widgets.html" class="case-next__preview" aria-hidden="true">
+                    <img class="case-next__preview-img" src="https://picsum.photos/seed/habiteo-widgets-next/600/750" alt="" loading="lazy" />
+                    <span class="case-next__preview-label">Habiteo Widgets · 2020 — 2022</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer" id="contact">
+        <div class="site-footer__inner">
+            <div>
+                <div class="site-footer__brand-name">Valentin<br>Bertinetti</div>
+                <p class="site-footer__tagline">Product designer &amp; photographe d'aventure, basé à Paris. Disponible pour des missions partout dans le monde.</p>
+            </div>
+            <div>
+                <div class="site-footer__col-title">Univers</div>
+                <ul class="site-footer__list">
+                    <li><a href="../design.html">Product design</a></li>
+                    <li><a href="../photography.html">Photographie</a></li>
+                    <li><a href="../a-propos.html">À propos</a></li>
+                    <li><a href="../design.html#services">Services</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="site-footer__col-title">Contact</div>
+                <ul class="site-footer__list">
+                    <li><a href="mailto:val.bertinetti@gmail.com">val.bertinetti@gmail.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/valentin-bertinetti/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="../index.html">Retour à l'accueil</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="site-footer__bottom">
+            <span>© 2026 Valentin Bertinetti — Tous droits réservés</span>
+            <span>Conçu &amp; codé à la main</span>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" aria-hidden="true" role="dialog" aria-label="Aperçu de l'image" aria-modal="true">
+        <button class="lightbox__close" aria-label="Fermer l'aperçu" type="button">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M5 5L15 15M5 15L15 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <figure class="lightbox__figure">
+            <img class="lightbox__image" src="" alt="" />
+            <figcaption class="lightbox__caption"></figcaption>
+        </figure>
+        <span class="lightbox__hint">ESC pour fermer</span>
+    </div>
+
+    <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

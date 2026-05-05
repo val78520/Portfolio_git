@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentin Bertinetti - Product Design</title>
+    <meta name="description" content="Univers product design de Valentin Bertinetti. Projets, services freelance et approche.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;450;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="page">
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="index.html" class="site-header__brand">
+                Valentin Bertinetti<span class="site-header__brand-mark"> ·</span>
+            </a>
+            <nav class="site-header__nav" aria-label="Navigation principale">
+                <a href="design.html" class="site-header__link is-active">Design</a>
+                <a href="photography.html" class="site-header__link site-header__link--secondary">Photographie</a>
+                <a href="a-propos.html" class="site-header__link site-header__link--secondary">À propos</a>
+                <a href="#contact" class="site-header__link site-header__link--secondary">Contact</a>
+                <a href="#contact" class="site-header__status">
+                    <span class="site-header__status-dot"></span>
+                    <span>Disponible</span>
+                </a>
+                <button class="site-header__burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav-overlay" type="button">
+                    <span class="site-header__burger-line"></span>
+                    <span class="site-header__burger-line"></span>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Overlay menu mobile -->
+        <div class="site-header__overlay" id="site-nav-overlay" aria-hidden="true">
+            <nav class="site-header__overlay-nav" aria-label="Menu mobile">
+                <ul class="site-header__overlay-list">
+                    <li><a href="design.html" class="site-header__overlay-link is-active"><span class="site-header__overlay-list-num">01</span>Design</a></li>
+                    <li><a href="photography.html" class="site-header__overlay-link "><span class="site-header__overlay-list-num">02</span>Photographie</a></li>
+                    <li><a href="a-propos.html" class="site-header__overlay-link "><span class="site-header__overlay-list-num">03</span>À propos</a></li>
+                    <li><a href="#contact" class="site-header__overlay-link"><span class="site-header__overlay-list-num">04</span>Contact</a></li>
+                </ul>
+            </nav>
+            <div class="site-header__overlay-footer">
+                <a href="mailto:val.bertinetti@gmail.com">val.bertinetti@gmail.com</a>
+                <a href="https://www.linkedin.com/in/valentin-bertinetti/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="design-hero">
+            <div class="design-hero__eyebrow eyebrow reveal">Univers · Product Design</div>
+            <h1 class="design-hero__title reveal reveal-delay-1">
+                Concevoir des produits <em>utiles</em> et durables.
+            </h1>
+
+            <div class="design-hero__meta reveal reveal-delay-2">
+                <div class="design-hero__meta-item">
+                    <span class="design-hero__meta-label">Rôle</span>
+                    <span class="design-hero__meta-value">Product Designer</span>
+                </div>
+                <div class="design-hero__meta-item">
+                    <span class="design-hero__meta-label">Expérience</span>
+                    <span class="design-hero__meta-value">5 ans </span>
+                </div>
+                <div class="design-hero__meta-item">
+                    <span class="design-hero__meta-label">Basé à</span>
+                    <span class="design-hero__meta-value">Paris, France</span>
+                </div>
+                <div class="design-hero__meta-item">
+                    <span class="design-hero__meta-label">Approche</span>
+                    <span class="design-hero__meta-value">UX/UI · Design thinking · IA</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projets — Index éditorial -->
+        <section class="projects-alt projects-alt--index" id="projects">
+            <header class="palt-header reveal">
+                <span class="eyebrow">Sélection de projets</span>
+                <h2 class="palt-header__title">Index <em>2020 → 2026.</em></h2>
+            </header>
+
+            <ul class="pindex__list">
+
+                <li class="pindex__item reveal">
+                    <a href="projects/renault-group.html" class="pindex__link">
+                        <span class="pindex__num">01</span>
+                        <div class="pindex__main">
+                            <span class="pindex__title">Renault Group</span>
+                            <p class="pindex__desc">Porter la voix de l'UX dans un programme de transformation industrielle. Trois ans à acculturer les équipes métier et adapter la méthode aux contraintes du terrain.</p>
+                        </div>
+                        <span class="pindex__cat">Transformation UX · Industrie</span>
+                        <span class="pindex__year">2022 — en cours</span>
+                        <span class="pindex__arrow">→</span>
+                    </a>
+                    <div class="pindex__preview" aria-hidden="true">
+                        <img src="/Users/bertinettivalentin/Portefolio/assets/images/RG.jpg" alt="" loading="lazy" />
+                    </div>
+                </li>
+
+                <li class="pindex__item reveal">
+                    <a href="projects/myhabiteo-studio.html" class="pindex__link">
+                        <span class="pindex__num">02</span>
+                        <div class="pindex__main">
+                            <span class="pindex__title">MyHabiteo Studio</span>
+                            <p class="pindex__desc">Création d'un module d'export de visuels 3D pour les promoteurs immobiliers. Du concept R&amp;D au catalogue produit en 6 mois — un nouveau levier de revenus récurrents pour Habiteo.</p>
+                        </div>
+                        <span class="pindex__cat">Produit · Visualisation 3D</span>
+                        <span class="pindex__year">2022</span>
+                        <span class="pindex__arrow">→</span>
+                    </a>
+                    <div class="pindex__preview" aria-hidden="true">
+                        <img src="/Users/bertinettivalentin/Portefolio/assets/images/studio-steps.png" alt="" loading="lazy" />
+                    </div>
+                </li>
+
+                <li class="pindex__item reveal">
+                    <a href="projects/habiteo-widgets.html" class="pindex__link">
+                        <span class="pindex__num">03</span>
+                        <div class="pindex__main">
+                            <span class="pindex__title">Habiteo Widgets</span>
+                            <p class="pindex__desc">Designer un produit user-centric dans un écosystème piloté par le business. Deux ans en double casquette PO &amp; UX Designer pour piloter la roadmap des widgets 3D.</p>
+                        </div>
+                        <span class="pindex__cat">SaaS B2B · Roadmap produit</span>
+                        <span class="pindex__year">2020 — 2022</span>
+                        <span class="pindex__arrow">→</span>
+                    </a>
+                    <div class="pindex__preview" aria-hidden="true">
+                        <img src="/Users/bertinettivalentin/Portefolio/assets/images/studio-maquettes3.png" alt="" loading="lazy" />
+                    </div>
+                </li>
+
+                <li class="pindex__item reveal">
+                    <a href="#" class="pindex__link">
+                        <span class="pindex__num">04</span>
+                        <div class="pindex__main">
+                            <span class="pindex__title">Solenne — SaaS B2B</span>
+                            <p class="pindex__desc">Conception d'un outil de gestion énergétique pour PME. Cadrage produit, ateliers utilisateurs et livraison d'un MVP en 12 semaines.</p>
+                        </div>
+                        <span class="pindex__cat">Énergie · MVP &amp; cadrage</span>
+                        <span class="pindex__year">2024</span>
+                        <span class="pindex__arrow">→</span>
+                    </a>
+                    <div class="pindex__preview" aria-hidden="true">
+                        <img src="https://picsum.photos/seed/solenne-saas-teaser/800/600" alt="" loading="lazy" />
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+
+        <!-- Services freelance -->
+        <section class="services" id="services">
+            <div class="services__inner">
+
+                <div class="services__header reveal">
+                    <div>
+                        <div class="eyebrow services__eyebrow">Mes spécialités</div>
+                        <h2 class="services__title">Un partenaire produit, <em>de bout en bout</em>.</h2>
+                    </div>
+                    <p class="services__intro">
+                        J'accompagne startups et équipes produit en mission longue ou ponctuelle, depuis le cadrage stratégique jusqu'à la livraison d'interfaces de qualité.
+                    </p>
+                </div>
+
+                <div class="services__list">
+
+                    <div class="services__item reveal">
+                        <span class="services__num">01</span>
+                        <div>
+                            <h3 class="services__name">Stratégie produit</h3>
+                            <p class="services__desc">Cadrage, vision, roadmap. Aligner les équipes autour d'un problème clair avant d'écrire la moindre ligne de code.</p>
+                        </div>
+                    </div>
+
+                    <div class="services__item reveal">
+                        <span class="services__num">02</span>
+                        <div>
+                            <h3 class="services__name">UX & recherche</h3>
+                            <p class="services__desc">Entretiens utilisateurs, tests d'usabilité et analyse de parcours. Décisions ancrées dans la réalité du terrain.</p>
+                        </div>
+                    </div>
+
+                    <div class="services__item reveal">
+                        <span class="services__num">03</span>
+                        <div>
+                            <h3 class="services__name">Conception de sites</h3>
+                            <p class="services__desc">Responsives, ergonomiques et accessibles rapide via des outils low-code (framer, shopify) ou de vibe coding (V0, lovable, Figma make)</p>
+                        </div>
+                    </div>
+
+                    <div class="services__item reveal">
+                        <span class="services__num">04</span>
+                        <div>
+                            <h3 class="services__name">Formation</h3>
+                            <p class="services__desc">Formation à l'UX et au design thinking dans les écoles supérieur et des entreprises</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="services__cta-block reveal" id="contact">
+                    <p class="services__cta-text">
+                        Un projet en tête ? Discutons-en autour d'un café.
+                    </p>
+                    <a href="mailto:val.bertinetti@gmail.com" class="cta-button">
+                        Me contacter
+                        <svg class="cta-button__arrow" width="18" height="14" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M9.5 1L15 6M15 6L9.5 11M15 6H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Services freelance — Forfaits -->
+        <section class="offers" id="forfaits">
+            <div class="offers__inner">
+
+                <div class="offers__header reveal">
+                    <div>
+                        <div class="eyebrow offers__eyebrow">Services freelance</div>
+                        <h2 class="offers__title">Cinq offres pour répondre <em>à vos besoins</em> sur l'experience utilisateurs</h2>
+                    </div>
+                    <p class="offers__intro">
+                        Du one-pager à la refonte produit, en passant par l'audit et la formation. Cinq forfaits clairs — chaque devis est ensuite ajusté à votre périmètre réel.
+                    </p>
+                </div>
+
+                <ol class="offers__list">
+
+                    <!-- 01 — landing page (fast) -->
+                    <li class="offer reveal">
+                        <div class="offer__head">
+                            <div class="offer__head-top">
+                                <span class="offer__num">01</span>
+                                <span class="offer__duration">2 - 3 semaines</span>
+                            </div>
+                            <h3 class="offer__name">Landing page (Fast)</h3>
+                            <div class="offer__price">
+                                <span class="offer__price-label">À partir de</span>
+                                <span class="offer__price-value">600 €</span>
+                            </div>
+                            <a href="mailto:val.bertinetti@gmail.com?subject=Projet%20%E2%80%94%20Site%20vitrine" class="offer__cta">
+                                Me contacter
+                                <svg class="offer__cta-arrow" width="14" height="10" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M9.5 1L15 6M15 6L9.5 11M15 6H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="offer__body">
+                            <div class="offer__block">
+                                <span class="offer__block-label">Inclus</span>
+                                <ul class="offer__includes">
+                                    <li>Audit, arborescence, intégration, responsive, mise en production</li>
+                                    <!-- <li>Audit rapide  + génération du site + intégration des contenus + responsive + mise en production du site </li> -->
+                                    <!-- <li>CMS léger pour édition autonome</li> -->
+                                    <li>SEO , sitemap, GA</li>
+                                    <li>Accessibilité AA</li>
+                                    <li>2 itérations incluses</li>
+                                </ul>
+                            </div>
+                            <!-- <div class="offer__block">
+                                <span class="offer__block-label">Options</span>
+                                <ul class="offer__options">
+                                    <li>Blog éditorial</li>
+                                    <li>Versions multilingues</li>
+                                    <li>Intégrations tierces (CRM, Calendly…)</li>
+                                </ul>
+                            </div> -->
+                        </div>
+                    </li>
+
+                    <!-- 02 — Landing page -->
+                    <li class="offer reveal">
+                        <div class="offer__head">
+                            <div class="offer__head-top">
+                                <span class="offer__num">02</span>
+                                <span class="offer__duration">3 - 4 semaines</span>
+                            </div>
+                            <h3 class="offer__name">Landing page (classique)</h3>
+                            <div class="offer__price">
+                                <span class="offer__price-label">À partir de</span>
+                                <span class="offer__price-value">1 000 €</span>
+                            </div>
+                            <a href="mailto:val.bertinetti@gmail.com?subject=Projet%20%E2%80%94%20Landing%20page" class="offer__cta">
+                                Me contacter
+                                <svg class="offer__cta-arrow" width="14" height="10" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M9.5 1L15 6M15 6L9.5 11M15 6H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="offer__body">
+                            <div class="offer__block">
+                                <span class="offer__block-label">Inclus</span>
+                                <ul class="offer__includes">
+                                    <li>Audit du besoin, design et création du site</li>
+                                    <li>Intégration des contenus</li>
+                                    <li>Mise en production + SEO de base</li>
+                                    <li>Installation Google Analytics</li>
+                                    <li>Accessibilité renforcée</li>
+                                    <li>3 itérations incluses</li>
+                                </ul>
+                            </div>
+                            <div class="offer__block">
+                                <span class="offer__block-label">Options</span>
+                                <ul class="offer__options">
+                                    <li>Formulaires</li>
+                                    <li>UX writing</li>
+                                    <li>Google Tag Manager</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 03 — Audit UX express -->
+                    <li class="offer reveal">
+                        <div class="offer__head">
+                            <div class="offer__head-top">
+                                <span class="offer__num">03</span>
+                                <span class="offer__duration">6 - 8 semaines</span>
+                            </div>
+                            <h3 class="offer__name">Site multi-pages</h3>
+                            <div class="offer__price">
+                                <span class="offer__price-label">À partir de</span>
+                                <span class="offer__price-value">1 500 €</span>
+                            </div>
+                            <a href="mailto:val.bertinetti@gmail.com?subject=Projet%20%E2%80%94%20Audit%20UX" class="offer__cta">
+                                Me contacter
+                                <svg class="offer__cta-arrow" width="14" height="10" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M9.5 1L15 6M15 6L9.5 11M15 6H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="offer__body">
+                            <div class="offer__block">
+                                <span class="offer__block-label">Inclus</span>
+                                <ul class="offer__includes">
+                                    <li>Audit du besoin, design et création du site</li>
+                                    <li>Intégration des contenus</li>
+                                    <li>Mise en production + SEO de base</li>
+                                    <li>Installation Google Analytics</li>
+                                    <li>Accessibilité renforcée</li>
+                                    <li>3 itérations incluses</li>
+                                </ul>
+                            </div>
+                            <div class="offer__block">
+                                <span class="offer__block-label">Options</span>
+                                <ul class="offer__options">
+                                    <li>Blog</li>
+                                    <li>Formulaires</li>
+                                    <li>UX writing</li>
+                                    <li>Google Tag Manager</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 04 — Refonte produit / SaaS -->
+                    <li class="offer reveal">
+                        <div class="offer__head">
+                            <div class="offer__head-top">
+                                <span class="offer__num">04</span>
+                                <span class="offer__duration">À définir</span>
+                            </div>
+                            <h3 class="offer__name">Delivery et stratégie design</h3>
+                            <div class="offer__price">
+                                <!-- <span class="offer__price-label">/ jour</span> -->
+                                <span class="offer__price-value">500 € <span class="offer__price-unit">/ jour</span></span>
+                            </div>
+                            <a href="mailto:val.bertinetti@gmail.com?subject=Projet%20%E2%80%94%20Refonte%20produit" class="offer__cta">
+                                Me contacter
+                                <svg class="offer__cta-arrow" width="14" height="10" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M9.5 1L15 6M15 6L9.5 11M15 6H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="offer__body">
+                            <div class="offer__block">
+                                <span class="offer__block-label">Inclus</span>
+                                <p>Etapes de conception à définir ensemble en fonction du besoin (framing, définition des objectifs business, personae, atelier d’idéation, etc...)</p>
+                                <!-- <ul class="offer__includes">
+                                    <li>Etapes de conception à définir ensemble en fonction du besoin (framing, définition des objectifs business, personae, atelier d’idéation, etc...)</li>
+                                    <li>Refonte des parcours clés</li>
+                                    <li>Design system documenté (Figma)</li>
+                                    <li>Spécifications dev &amp; accompagnement sprints</li>
+                                    <li>Tracking et KPIs UX</li>
+                                </ul>
+                            </div>
+                            <div class="offer__block">
+                                <span class="offer__block-label">Options</span>
+                                <ul class="offer__options">
+                                    <li>Prototype haute-fidélité testable</li>
+                                    <li>Tests utilisateurs sur prototype</li>
+                                    <li>Suivi post-livraison (3 mois)</li>
+                                </ul>
+                            </div> -->
+                        </div>
+                    </li>
+
+                    <!-- 05 — Workshop & formation -->
+                    <li class="offer reveal">
+                        <div class="offer__head">
+                            <div class="offer__head-top">
+                                <span class="offer__num">05</span>
+                                <span class="offer__duration">40 heures</span>
+                            </div>
+                            <h3 class="offer__name">Initiation UX/UI Design</h3>
+                            <div class="offer__price">
+                                <!-- <span class="offer__price-label">/ apprenant</span> -->
+                                <span class="offer__price-value">135 € <span class="offer__price-unit">/ apprenant</span></span>
+                            </div>
+                            <a href="mailto:val.bertinetti@gmail.com?subject=Projet%20%E2%80%94%20Workshop%20%2F%20Formation" class="offer__cta">
+                                Me contacter
+                                <svg class="offer__cta-arrow" width="14" height="10" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M9.5 1L15 6M15 6L9.5 11M15 6H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="offer__body">
+                            <div class="offer__block">
+                                <span class="offer__block-label">Inclus</span>
+                                <ul class="offer__includes">
+                                    <li>Histoire du design, UX et design thinking, UI design et bonnes pratiques, travail sur cas pratiques.</li>
+                                    <li>Minimum 5 apprenants</li>
+                                    <li>Max 15 apprenants (sinon 2 classes)</li>
+                                    <!-- <li>Supports et ressources fournis</li> -->
+                                </ul>
+                            </div>
+                            <!-- <div class="offer__block">
+                                <span class="offer__block-label">Options</span>
+                                <ul class="offer__options">
+                                    <li>Programme étalé sur plusieurs sessions</li>
+                                    <li>Suivi post-formation (Q&amp;R sur un mois)</li>
+                                    <li>Atelier sur projet réel</li>
+                                </ul>
+                            </div> -->
+                        </div>
+                    </li>
+
+                </ol>
+
+                <p class="offers__note reveal">
+                    Tous les forfaits incluent brief, kick-off et livrables Figma propres. Hors abonnement, hébergement et outils tiers.
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div>
+                <div class="site-footer__brand-name">Valentin<br>Bertinetti</div>
+                <p class="site-footer__tagline">Product designer & photographe d'aventure, basé à Paris. Disponible pour des missions partout dans le monde.</p>
+            </div>
+            <div>
+                <div class="site-footer__col-title">Univers</div>
+                <ul class="site-footer__list">
+                    <li><a href="design.html">Product design</a></li>
+                    <li><a href="photography.html">Photographie</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="#contact">Services</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="site-footer__col-title">Contact</div>
+                <ul class="site-footer__list">
+                    <li><a href="mailto:val.bertinetti@gmail.com">val.bertinetti@gmail.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/valentin-bertinetti/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="index.html">Retour à l'accueil</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="site-footer__bottom">
+            <span>© 2026 Valentin Bertinetti — Tous droits réservés</span>
+            <span>Conçu &amp; codé à la main</span>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>

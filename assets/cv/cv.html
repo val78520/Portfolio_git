@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Valentin Bertinetti — CV</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;450;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* Tokens — alignés sur le site */
+        :root {
+            --color-ivory: #F5F1E8;
+            --color-ivory-soft: #FAF6EB;
+            --color-forest: #2D3F32;
+            --color-forest-deep: #1F2D24;
+            --color-sand: #C9B58E;
+            --color-ink: #1A1A1A;
+            --color-ink-soft: #4A4A4A;
+            --color-ember: #B85C38;
+            --color-line: rgba(26, 26, 26, 0.12);
+
+            --font-display: 'Inter Tight', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        html, body {
+            font-family: var(--font-body);
+            font-size: 9.5pt;
+            line-height: 1.45;
+            color: var(--color-ink);
+            background: var(--color-ivory);
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            color: var(--color-forest-deep);
+            letter-spacing: -0.02em;
+            font-weight: 500;
+        }
+
+        em {
+            color: var(--color-ember);
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        /* Layout A4 */
+        .cv {
+            width: 210mm;
+            height: 297mm;
+            padding: 12mm 12mm 10mm;
+            display: grid;
+            grid-template-columns: 62mm 1fr;
+            gap: 8mm;
+            background: var(--color-ivory);
+            overflow: hidden;
+            page-break-after: avoid;
+            page-break-inside: avoid;
+        }
+
+        /* ===== Colonne gauche ===== */
+        .cv-aside {
+            display: flex;
+            flex-direction: column;
+            gap: 5mm;
+            border-right: 1px solid var(--color-line);
+            padding-right: 6mm;
+        }
+
+        .cv-portrait {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            border-radius: 3mm;
+            overflow: hidden;
+            background: var(--color-sand);
+        }
+        .cv-portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .cv-block-label {
+            font-size: 7pt;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--color-ink-soft);
+            font-weight: 500;
+            margin-bottom: 2.5mm;
+            padding-bottom: 1.5mm;
+            border-bottom: 1px solid var(--color-line);
+        }
+
+        .cv-contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.8mm;
+            font-size: 8.5pt;
+            color: var(--color-forest-deep);
+        }
+        .cv-contact-list li span {
+            display: block;
+            font-size: 7pt;
+            color: var(--color-ink-soft);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.3mm;
+        }
+        .cv-contact-list a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid var(--color-line);
+            padding-bottom: 0.3mm;
+        }
+
+        .cv-langs {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.8mm;
+        }
+        .cv-langs li {
+            display: flex;
+            justify-content: space-between;
+            font-size: 8.5pt;
+            padding: 1mm 0;
+            border-bottom: 1px solid var(--color-line);
+        }
+        .cv-langs li:last-child { border-bottom: 0; }
+        .cv-langs__name {
+            font-family: var(--font-display);
+            font-weight: 500;
+            color: var(--color-forest-deep);
+        }
+        .cv-langs__level {
+            color: var(--color-ink-soft);
+            font-size: 7.5pt;
+        }
+
+        .cv-chips {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2mm;
+        }
+        .cv-chips li {
+            font-family: var(--font-display);
+            font-size: 7.5pt;
+            color: var(--color-forest-deep);
+            padding: 0.8mm 2.4mm;
+            border: 1px solid var(--color-line);
+            border-radius: 999px;
+            background: var(--color-ivory-soft);
+        }
+
+        .cv-quote {
+            margin-top: auto;
+            padding-top: 4mm;
+            border-top: 1px solid var(--color-line);
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 9pt;
+            line-height: 1.4;
+            color: var(--color-forest-deep);
+        }
+        .cv-quote em {
+            color: var(--color-ember);
+        }
+        .cv-quote__cite {
+            display: block;
+            margin-top: 1.5mm;
+            font-style: normal;
+            font-size: 7pt;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--color-sand);
+        }
+
+        /* ===== Colonne principale ===== */
+        .cv-main {
+            display: flex;
+            flex-direction: column;
+            gap: 4.5mm;
+        }
+
+        .cv-head__eyebrow {
+            font-size: 7pt;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--color-forest);
+            margin-bottom: 2mm;
+        }
+        .cv-head__name {
+            font-family: var(--font-display);
+            font-size: 26pt;
+            font-weight: 500;
+            line-height: 0.95;
+            letter-spacing: -0.035em;
+            color: var(--color-forest-deep);
+            margin-bottom: 1.5mm;
+        }
+        .cv-head__role {
+            font-family: var(--font-display);
+            font-size: 10.5pt;
+            font-weight: 400;
+            color: var(--color-ink-soft);
+            margin-bottom: 3mm;
+            letter-spacing: -0.01em;
+        }
+        .cv-head__bio {
+            font-size: 8.8pt;
+            line-height: 1.5;
+            color: var(--color-ink);
+            max-width: 110mm;
+            padding-top: 2.5mm;
+            border-top: 1px solid var(--color-line);
+        }
+
+        .cv-section {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5mm;
+        }
+
+        .cv-section__title {
+            font-family: var(--font-display);
+            font-size: 9.5pt;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--color-forest-deep);
+            padding-bottom: 1mm;
+            border-bottom: 1.5px solid var(--color-forest-deep);
+        }
+
+        .cv-job {
+            display: grid;
+            grid-template-columns: 22mm 1fr;
+            gap: 4mm;
+            padding: 0.5mm 0;
+        }
+
+        .cv-job__period {
+            font-family: var(--font-display);
+            font-size: 7.5pt;
+            font-weight: 500;
+            color: var(--color-ember);
+            letter-spacing: 0.04em;
+            line-height: 1.3;
+            padding-top: 0.8mm;
+            font-feature-settings: "tnum";
+        }
+
+        .cv-job__main { min-width: 0; }
+
+        .cv-job__title {
+            font-family: var(--font-display);
+            font-size: 10.5pt;
+            font-weight: 500;
+            color: var(--color-forest-deep);
+            line-height: 1.2;
+            letter-spacing: -0.015em;
+            margin-bottom: 0.6mm;
+        }
+        .cv-job__company {
+            font-size: 8.5pt;
+            color: var(--color-ink-soft);
+            margin-bottom: 1.5mm;
+        }
+        .cv-job__company strong {
+            color: var(--color-forest-deep);
+            font-weight: 500;
+        }
+        .cv-job__desc {
+            font-size: 8.5pt;
+            line-height: 1.5;
+            color: var(--color-ink);
+        }
+        .cv-job__bullets {
+            list-style: none;
+            margin-top: 1mm;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3mm;
+        }
+        .cv-job__bullets li {
+            font-size: 8pt;
+            line-height: 1.4;
+            padding-left: 3.5mm;
+            position: relative;
+            color: var(--color-ink);
+        }
+        .cv-job__bullets li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 1.6mm;
+            width: 2mm;
+            height: 1px;
+            background: var(--color-forest);
+        }
+
+        .cv-edu {
+            display: grid;
+            grid-template-columns: 22mm 1fr auto;
+            gap: 4mm;
+            align-items: baseline;
+            padding: 0.5mm 0;
+        }
+        .cv-edu__period {
+            font-family: var(--font-display);
+            font-size: 7.5pt;
+            font-weight: 500;
+            color: var(--color-ember);
+            letter-spacing: 0.04em;
+        }
+        .cv-edu__title {
+            font-family: var(--font-display);
+            font-size: 10pt;
+            font-weight: 500;
+            color: var(--color-forest-deep);
+        }
+        .cv-edu__school {
+            font-size: 8pt;
+            color: var(--color-ink-soft);
+            margin-top: 0.4mm;
+        }
+        .cv-edu__tag {
+            font-size: 7pt;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--color-sand);
+        }
+
+        .cv-footer {
+            margin-top: auto;
+            padding-top: 4mm;
+            border-top: 1px solid var(--color-line);
+            display: flex;
+            justify-content: space-between;
+            font-size: 7pt;
+            color: var(--color-ink-soft);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<div class="cv">
+
+    <!-- ============ COLONNE GAUCHE ============ -->
+    <aside class="cv-aside">
+
+        <div class="cv-portrait">
+            <img src="../images/portrait-valentin.jpg" alt="Portrait de Valentin Bertinetti" />
+        </div>
+
+        <div>
+            <div class="cv-block-label">Contact</div>
+            <ul class="cv-contact-list">
+                <li>
+                    <span>Email</span>
+                    <a href="mailto:val.bertinetti@gmail.com">val.bertinetti@gmail.com</a>
+                </li>
+                <li>
+                    <span>LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/valentin-bertinetti/">/in/valentin-bertinetti</a>
+                </li>
+                <li>
+                    <span>Portfolio</span>
+                    <a href="https://valentinbertinetti.fr">valentinbertinetti.fr</a>
+                </li>
+                <li>
+                    <span>Lieu</span>
+                    Paris, France
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <div class="cv-block-label">Langues</div>
+            <ul class="cv-langs">
+                <li>
+                    <span class="cv-langs__name">Français</span>
+                    <span class="cv-langs__level">Natif</span>
+                </li>
+                <li>
+                    <span class="cv-langs__name">Anglais</span>
+                    <span class="cv-langs__level">Intermédiaire</span>
+                </li>
+                <li>
+                    <span class="cv-langs__name">Espagnol</span>
+                    <span class="cv-langs__level">Intermédiaire</span>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <div class="cv-block-label">Méthodes</div>
+            <ul class="cv-chips">
+                <li>UX research</li>
+                <li>Design thinking</li>
+                <li>Cadrage produit</li>
+                <li>Design system</li>
+                <li>UX writing</li>
+                <li>Tracking analytics</li>
+                <li>Vibe coding</li>
+                <li>Animation d'ateliers</li>
+            </ul>
+        </div>
+
+        <div>
+            <div class="cv-block-label">Outils</div>
+            <ul class="cv-chips">
+                <li>Figma</li>
+                <li>FigJam</li>
+                <li>Jira</li>
+                <li>Notion</li>
+                <li>Google Analytics</li>
+                <li>GTM</li>
+                <li>V0</li>
+                <li>Lovable</li>
+                <li>Framer</li>
+                <li>Shopify</li>
+            </ul>
+        </div>
+
+        <div>
+            <div class="cv-block-label">Hors écran</div>
+            <ul class="cv-chips">
+                <li>Ultra-trail</li>
+                <li>Photographie</li>
+                <li>Voyage</li>
+            </ul>
+        </div>
+
+        <div class="cv-quote">
+            « La vie est dure, mais pas la <em>mienne</em>. »
+            <span class="cv-quote__cite">Théo Détienne</span>
+        </div>
+
+    </aside>
+
+    <!-- ============ COLONNE PRINCIPALE ============ -->
+    <section class="cv-main">
+
+        <header>
+            <div class="cv-head__eyebrow">Curriculum vitæ · 2026</div>
+            <h1 class="cv-head__name">Valentin<br>Bertinetti</h1>
+            <div class="cv-head__role">Product Designer — 5 ans d'expérience</div>
+            <p class="cv-head__bio">
+                Je conçois des produits numériques utiles, pour des équipes en quête d'impact. De bout en bout — du cadrage stratégique à la livraison —, en travaillant aussi bien la stratégie que l'exécution. Trois ans à porter la voix de l'UX chez Renault Digital, deux ans en double casquette PM &amp; UX chez Habiteo, un an d'enseignement à l'ESD.
+            </p>
+        </header>
+
+        <div class="cv-section">
+            <h2 class="cv-section__title">Expérience</h2>
+
+            <div class="cv-job">
+                <div class="cv-job__period">oct. 2022<br>aujourd'hui</div>
+                <div class="cv-job__main">
+                    <div class="cv-job__title">Product Designer</div>
+                    <div class="cv-job__company"><strong>Renault Digital</strong> · CDI · Boulogne-Billancourt</div>
+                    <ul class="cv-job__bullets">
+                        <li>Accompagnement des équipes Renault sur la méthode product &amp; design — alignement besoins utilisateurs / objectifs business.</li>
+                        <li>Conception UX/UI de produits digitaux BtoE : arborescence, parcours, stratégie contenu, hiérarchie de l'information, UI design, UX writing, vibe coding.</li>
+                        <li>Sensibilisation et acculturation design au sein des équipes projet.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cv-job">
+                <div class="cv-job__period">févr. 2024<br>janv. 2025</div>
+                <div class="cv-job__main">
+                    <div class="cv-job__title">Intervenant UX/UI Design</div>
+                    <div class="cv-job__company"><strong>ESD — École Supérieure du Digital</strong> · CDD · Paris</div>
+                    <ul class="cv-job__bullets">
+                        <li>Cours de UI étendu à l'UX pour Bachelor 2 spécialité développement web.</li>
+                        <li>Histoire du design, ergonomie, sciences cognitives, design system, animation d'un projet de design.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cv-job">
+                <div class="cv-job__period">oct. 2020<br>oct. 2022</div>
+                <div class="cv-job__main">
+                    <div class="cv-job__title">Product Manager web / UX Designer</div>
+                    <div class="cv-job__company"><strong>Habiteo</strong> · Alternance · Paris</div>
+                    <ul class="cv-job__bullets">
+                        <li>Double casquette PM &amp; UX sur les produits front : Megawidget, MyHabiteo Studio, Configurateur.</li>
+                        <li>UX : ateliers, recherche utilisateur, prototypage, tests utilisateurs.</li>
+                        <li>PM : backlog, priorisation, epics &amp; user stories, vision produit, méthodologie agile.</li>
+                        <li>Tracking GTM, KPIs UX, formation des équipes.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cv-job">
+                <div class="cv-job__period">avr. 2019<br>oct. 2020</div>
+                <div class="cv-job__main">
+                    <div class="cv-job__title">Assistant Marketing Web</div>
+                    <div class="cv-job__company"><strong>Groupe Bridgin</strong> · Le Mesnil-le-Roi</div>
+                    <ul class="cv-job__bullets">
+                        <li>Gestion de projets, fiches produits Prestashop, design d'emailings et bannières e-commerce.</li>
+                        <li>Suivi de campagne, plan de lancement, SEO/SEA et création vidéo motion design.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <h2 class="cv-section__title">Formation</h2>
+            <div class="cv-edu">
+                <div class="cv-edu__period">2017 — 2022</div>
+                <div>
+                    <div class="cv-edu__title">Master UX Design, Digital</div>
+                    <div class="cv-edu__school">École Supérieure du Digital — ESD, Paris</div>
+                </div>
+                <div class="cv-edu__tag">Master</div>
+            </div>
+        </div>
+
+        <div class="cv-section">
+            <h2 class="cv-section__title">Distinction</h2>
+            <div class="cv-edu">
+                <div class="cv-edu__period">oct. 2018</div>
+                <div>
+                    <div class="cv-edu__title">Sowee Data Challenge — 1<sup>ère</sup> place</div>
+                    <div class="cv-edu__school">Concours data &amp; design émis par Sowee.</div>
+                </div>
+                <div class="cv-edu__tag">1<sup>er</sup> prix</div>
+            </div>
+        </div>
+
+        <footer class="cv-footer">
+            <span>Valentin Bertinetti · CV 2026</span>
+            <span>val.bertinetti@gmail.com</span>
+        </footer>
+
+    </section>
+
+</div>
+
+</body>
+</html>

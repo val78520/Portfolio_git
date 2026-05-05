@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentin Bertinetti - De Buenos Aires à Ushuaïa</title>
+    <meta name="description" content="Carnet d'un voyage en Argentine, de Buenos Aires à Ushuaïa. Vingt-deux jours à descendre la Patagonie, plein sud, par la Route 3.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;450;500&display=swap" rel="stylesheet">
+
+    <!-- Leaflet (carte itinéraire) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="case">
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="../index.html" class="site-header__brand">
+                Valentin Bertinetti<span class="site-header__brand-mark"> ·</span>
+            </a>
+            <nav class="site-header__nav" aria-label="Navigation principale">
+                <a href="../design.html" class="site-header__link site-header__link--secondary">Design</a>
+                <a href="../photography.html" class="site-header__link is-active">Photographie</a>
+                <a href="../a-propos.html" class="site-header__link site-header__link--secondary">À propos</a>
+                <a href="#contact" class="site-header__link site-header__link--secondary">Contact</a>
+                <a href="#contact" class="site-header__status">
+                    <span class="site-header__status-dot"></span>
+                    <span>Disponible</span>
+                </a>
+                <button class="site-header__burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav-overlay" type="button">
+                    <span class="site-header__burger-line"></span>
+                    <span class="site-header__burger-line"></span>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Overlay menu mobile -->
+        <div class="site-header__overlay" id="site-nav-overlay" aria-hidden="true">
+            <nav class="site-header__overlay-nav" aria-label="Menu mobile">
+                <ul class="site-header__overlay-list">
+                    <li><a href="../design.html" class="site-header__overlay-link "><span class="site-header__overlay-list-num">01</span>Design</a></li>
+                    <li><a href="../photography.html" class="site-header__overlay-link is-active"><span class="site-header__overlay-list-num">02</span>Photographie</a></li>
+                    <li><a href="../a-propos.html" class="site-header__overlay-link "><span class="site-header__overlay-list-num">03</span>À propos</a></li>
+                    <li><a href="#contact" class="site-header__overlay-link"><span class="site-header__overlay-list-num">04</span>Contact</a></li>
+                </ul>
+            </nav>
+            <div class="site-header__overlay-footer">
+                <a href="mailto:val.bertinetti@gmail.com">val.bertinetti@gmail.com</a>
+                <a href="https://www.linkedin.com/in/valentin-bertinetti/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero text-first -->
+        <section class="case-hero">
+            <a href="../photography.html" class="case-hero__back">
+                <svg width="14" height="10" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M9.5 1L15 6M15 6L9.5 11M15 6H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Retour aux carnets
+            </a>
+
+            <div class="case-hero__eyebrow eyebrow reveal">Carnet de voyage · Argentine</div>
+
+            <h1 class="case-hero__title reveal reveal-delay-1">De Buenos Aires à Ushuaïa</h1>
+
+            <p class="case-hero__subtitle reveal reveal-delay-2">
+                14 jours à descendre la Patagonie, des grandes pleines désertiques jusqu'au canal de Beagle.
+            </p>
+
+            <div class="case-hero__meta reveal reveal-delay-3">
+                <div class="case-hero__meta-item">
+                    <span class="case-hero__meta-label">Lieu</span>
+                    <span class="case-hero__meta-value">Argentine</span>
+                </div>
+                <div class="case-hero__meta-item">
+                    <span class="case-hero__meta-label">Saison</span>
+                    <span class="case-hero__meta-value">Décembre 2025</span>
+                </div>
+                <div class="case-hero__meta-item">
+                    <span class="case-hero__meta-label">Distance</span>
+                    <span class="case-hero__meta-value">≈ 3 700 km</span>
+                </div>
+                <div class="case-hero__meta-item">
+                    <span class="case-hero__meta-label">Durée</span>
+                    <span class="case-hero__meta-value">12 jours</span>
+                </div>
+                <div class="case-hero__meta-item">
+                    <span class="case-hero__meta-label">Compagnons</span>
+                    <span class="case-hero__meta-value">Duo, sac à dos</span>
+                </div>
+                <div class="case-hero__meta-item">
+                    <span class="case-hero__meta-label">Boîtier</span>
+                    <span class="case-hero__meta-value">Fujifilm X-E5 · 35mm f/2</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cover -->
+        <div class="case-cover reveal">
+            <img class="case-cover__image" src="/Users/bertinettivalentin/Portefolio/assets/images/latam-argentine/latam-argentine16.png" alt="Steppe patagonne au lever du jour" />
+        </div>
+
+        <!-- TOC compact sticky -->
+        <nav class="case-toc" aria-label="Sommaire">
+            <div class="case-toc__inner">
+                <span class="case-toc__label">Sommaire</span>
+                <ul class="case-toc__list">
+                    <li><a href="#voyage" class="case-toc__link" data-toc-link>Le voyage</a></li>
+                    <li><a href="#itineraire" class="case-toc__link" data-toc-link>Itinéraire</a></li>
+                    <li><a href="#recit" class="case-toc__link" data-toc-link>Récit</a></li>
+                    <li><a href="#galerie" class="case-toc__link" data-toc-link>Galerie</a></li>
+                    <li><a href="#materiel" class="case-toc__link" data-toc-link>Matériel</a></li>
+                    <li><a href="#chiffres" class="case-toc__link" data-toc-link>En chiffres</a></li>
+                    <li><a href="#retour" class="case-toc__link" data-toc-link>Retour</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- 01 — Le voyage -->
+        <section class="case-section" id="voyage" data-toc>
+            <div class="case-section__num reveal">01 — Le voyage</div>
+            <h2 class="case-section__title reveal reveal-delay-1">Une seule ligne, plein sud.</h2>
+            <div class="case-prose reveal reveal-delay-2">
+                <p>L'Argentine, vue d'en haut, c'est presque un trait. La Route Nationale 3 part de Buenos Aires, longe l'Atlantique sur près de trois mille kilomètres, plonge dans la steppe patagonne, traverse le détroit de Magellan, et finit par s'arrêter à Ushuaïa, dernière terre habitée appelée là-bas <em>fin del mundo...</em> </p>
+                <p>Nous avons voulu faire ce trajet dans son entier. Pas pour le défi, ni pour collectionner les escales, mais pour <strong>voir un pays se déformer</strong> : l'effervescence de la capitale, la côte, le ciel qui s'élargit, et le vent qui finit par tout dire à la place du paysage.</p>
+                <p>12 jours, quatre escales principales, beaucoup d'heures de bus de nuit. Et un seul boîtier, une seule focale — 35 mm, équivalent 50mm pour rester à hauteur d'homme tout du long.</p>
+            </div>
+        </section>
+
+        <!-- Image full bleed -->
+        <figure class="case-figure case-figure--full case-figure--ember reveal">
+            <div class="case-figure__media">
+                <img class="case-figure__image" src="/Users/bertinettivalentin/Portefolio/assets/images/latam-argentine/latam-argentine5.png" alt="Lumière d'après-midi sur la steppe argentine" loading="lazy" />
+            </div>
+            <figcaption class="case-figure__caption">Quelque part entre Trelew et Comodoro Rivadavia. La Route 3 ne tourne presque jamais.</figcaption>
+        </figure>
+
+        <!-- 02 — Itinéraire (carte) -->
+        <section class="case-map" id="itineraire" data-toc>
+            <div class="case-section__num reveal">02 — L'itinéraire</div>
+            <h2 class="case-section__title reveal reveal-delay-1">Quatre escales, trois mille sept cents kilomètres.</h2>
+            <div class="case-prose reveal reveal-delay-2">
+                <p>De Buenos Aires à Ushuaïa, par la Route 3 et un ferry pour franchir le détroit. Quatre points d'arrêt — chacun une raison, chacun une lumière différente.</p>
+            </div>
+
+            <div class="case-map__frame reveal">
+                <div id="patagonia-map" class="case-map__canvas" aria-label="Carte de l'itinéraire de Buenos Aires à Ushuaïa"></div>
+
+                <ol class="case-map__legend">
+                    <li>
+                        <span class="case-map__bullet">01</span>
+                        <div>
+                            <strong>Buenos Aires</strong>
+                            <span>Départ — Río de la Plata</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="case-map__bullet">02</span>
+                        <div>
+                            <strong>Puerto Madryn</strong>
+                            <span>≈ 1 380 km — Péninsule Valdés</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="case-map__bullet">03</span>
+                        <div>
+                            <strong>Río Gallegos</strong>
+                            <span>≈ 1 750 km — Porte de la Patagonie</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="case-map__bullet">04</span>
+                        <div>
+                            <strong>Ushuaïa</strong>
+                            <span>≈ 590 km — Terre de Feu</span>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+
+            <p class="case-map__hint">Cliquez et déplacez la carte. Pour zoomer, utilisez les boutons + / −.</p>
+        </section>
+
+        <!-- 03 — Le récit -->
+        <section class="case-chapters" id="recit" data-toc>
+            <div class="case-section__num reveal">03 — Le récit</div>
+            <h2 class="case-section__title reveal reveal-delay-1">Vingt-deux jours, racontés par étapes.</h2>
+
+            <div class="case-chapters__list">
+
+                <article class="case-chapter reveal">
+                    <div class="case-chapter__col">
+                        <div class="case-chapter__head">
+                            <span class="case-chapter__step">Étape 01 · Jours 1 à 3</span>
+                            <h3 class="case-chapter__title">Buenos Aires — la mise en route</h3>
+                            <p class="case-chapter__loc">Capitale fédérale · Río de la Plata</p>
+                        </div>
+                        <div class="case-chapter__text">
+                            <p>Première impression : la chaleur humide, et les arbres immenses de Recoleta qui font de l'ombre comme à Lisbonne. Buenos Aires se traverse à pied. San Telmo, La Boca, Palermo Soho — chaque quartier a sa lumière, ses façades, sa façon de ne pas se ressembler.</p>
+                            <p>Trois jours pour acclimater l'œil. Le boîtier reste sorti tout le temps — pas pour photographier, surtout pour <em>regarder</em>. Apprendre à doser entre l'envie de tout cadrer et celle de simplement marcher.</p>
+                        </div>
+                    </div>
+                    <figure class="case-chapter__photo">
+                        <img src="/Users/bertinettivalentin/Portefolio/assets/images/latam-argentine/latam-argentine2.png" alt="Façades colorées de La Boca, Buenos Aires" loading="lazy" />
+                        <figcaption>La Boca, fin d'après-midi. La lumière argentine n'a pas la même densité qu'en Europe.</figcaption>
+                    </figure>
+                </article>
+
+                <article class="case-chapter reveal">
+                    <div class="case-chapter__col">
+                        <div class="case-chapter__head">
+                            <span class="case-chapter__step">Étape 02 · Jours 4 à 8</span>
+                            <h3 class="case-chapter__title">Puerto Madryn — la péninsule Valdés</h3>
+                            <p class="case-chapter__loc">Province de Chubut · Atlantique</p>
+                        </div>
+                        <div class="case-chapter__text">
+                            <p>1 380 km de bus de nuit. On se réveille dans un autre pays : le ciel a triplé de volume, l'horizon est plat sur 360°. Puerto Madryn est une petite ville côtière qui sent l'huile solaire et le vent.</p>
+                            <p>Trois jours sur la péninsule Valdés. Manchots de Magellan, otaries, et — au large — les souffles des baleines franches qui viennent mettre bas dans le golfe. Photographier de loin, beaucoup attendre. La péninsule apprend la patience aux gens pressés.</p>
+                        </div>
+                    </div>
+                    <figure class="case-chapter__photo">
+                        <img src="/Users/bertinettivalentin/Portefolio/assets/images/latam-argentine/latam-argentine8.png" alt="Côte rocheuse de la péninsule Valdés" loading="lazy" />
+                        <figcaption>Punta Norte, Valdés. L'eau ici est plus froide qu'on ne croit.</figcaption>
+                    </figure>
+                </article>
+
+                <article class="case-chapter reveal">
+                    <div class="case-chapter__col">
+                        <div class="case-chapter__head">
+                            <span class="case-chapter__step">Étape intermédiaire · Jours 9 à 13</span>
+                            <h3 class="case-chapter__title">La steppe — apprendre le vent</h3>
+                            <p class="case-chapter__loc">Patagonie centrale · Route 3</p>
+                        </div>
+                        <div class="case-chapter__text">
+                            <p>Entre Madryn et Río Gallegos, près de 1 800 kilomètres de steppe. Du vent, du jaune sec, des estancias isolées, et de temps en temps un guanaco qui regarde passer le bus comme s'il avait tout son temps — parce qu'il l'a.</p>
+                            <p>Deux nuits dans des petites villes-relais : Comodoro Rivadavia, Puerto San Julián. Rien à voir, et c'est précisément ça qu'il fallait voir. La Patagonie ne se livre pas à ceux qui ne s'arrêtent qu'aux cartes postales.</p>
+                        </div>
+                    </div>
+                    <figure class="case-chapter__photo">
+                        <img src="/Users/bertinettivalentin/Portefolio/assets/images/latam-argentine/latam-argentine13.png" alt="Steppe patagonne sous un grand ciel" loading="lazy" />
+                        <figcaption>Quelque part au nord de Caleta Olivia. Trois heures sans croiser une voiture.</figcaption>
+                    </figure>
+                </article>
+
+                <article class="case-chapter reveal">
+                    <div class="case-chapter__col">
+                        <div class="case-chapter__head">
+                            <span class="case-chapter__step">Étape 03 · Jours 14 à 17</span>
+                            <h3 class="case-chapter__title">Río Gallegos — au bord du détroit</h3>
+                            <p class="case-chapter__loc">Province de Santa Cruz · 51° sud</p>
+                        </div>
+                        <div class="case-chapter__text">
+                            <p>Río Gallegos n'est pas une ville pour touristes. C'est une ville de marins, de pétroliers, de fonctionnaires — la dernière vraie ville avant la frontière chilienne et le détroit de Magellan. Le ciel y est immense et le vent ne se couche jamais.</p>
+                            <p>Quatre jours à marcher le long de l'estuaire, à photographier les flamants roses qui s'y posent par centaines, et à prendre le temps avant la dernière étape — qui demande deux postes-frontière et un ferry pour franchir l'océan.</p>
+                        </div>
+                    </div>
+                    <figure class="case-chapter__photo">
+                        <img src="/Users/bertinettivalentin/Portefolio/assets/images/latam-argentine/latam-argentine21.png" alt="Lumière d'estuaire sur Río Gallegos" loading="lazy" />
+                        <figcaption>Estuaire du Río Gallegos. La marée descend, les oiseaux arrivent.</figcaption>
+                    </figure>
+                </article>
+
+                <article class="case-chapter reveal">
+                    <div class="case-chapter__col">
+                        <div class="case-chapter__head">
+                            <span class="case-chapter__step">Étape 04 · Jours 18 à 22</span>
+                            <h3 class="case-chapter__title">Ushuaïa — au bout du monde</h3>
+                            <p class="case-chapter__loc">Terre de Feu · Canal de Beagle</p>
+                        </div>
+                        <div class="case-chapter__text">
+                            <p>Le ferry traverse le détroit de Magellan en pleine matinée. La traversée dure vingt minutes, et c'est le moment du voyage où j'ai compris que j'étais <em>vraiment</em> au sud. Plus rien après, sinon l'Antarctique.</p>
+                            <p>Ushuaïa est nichée entre des montagnes encore enneigées et le canal de Beagle. Cinq jours à marcher dans le parc Tierra del Fuego, à photographier une lumière australe qui n'existe nulle part ailleurs — basse, longue, oblique, comme si le soleil hésitait avant de se coucher.</p>
+                        </div>
+                    </div>
+                    <figure class="case-chapter__photo">
+                        <img src="/Users/bertinettivalentin/Portefolio/assets/images/latam-argentine/latam-argentine23.png" alt="Montagnes au-dessus du canal de Beagle" loading="lazy" />
+                        <figcaption>Vue du Cerro Martial. Le canal de Beagle, en bas, et le Chili de l'autre côté.</figcaption>
+                    </figure>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Pull quote -->
+        <section class="case-quote">
+            <p class="case-quote__text reveal">
+                Le sud n'est pas une direction, c'est une cadence&nbsp;: tout y est plus lent, plus dur, plus net.
+            </p>
+        </section>
+
+        <!-- Diptyque -->
+        <div class="case-grid reveal">
+            <figure class="case-figure case-figure--ink">
+                <div class="case-figure__media">
+                    <img class="case-figure__image" src="/Users/bertinettivalentin/Portefolio/assets/images/latam-argentine/latam-argentine18.png" alt="Mer du sud, ciel chargé" loading="lazy" />
+                </div>
+                <figcaption class="case-figure__caption">Sud-est du canal — matin gris.</figcaption>
+            </figure>
+            <figure class="case-figure case-figure--sand">
+                <div class="case-figure__media">
+                    <img class="case-figure__image" src="/Users/bertinettivalentin/Portefolio/assets/images/latam-argentine/latam-argentine12.png" alt="Steppe en lumière chaude" loading="lazy" />
+                </div>
+                <figcaption class="case-figure__caption">Steppe centrale — fin d'après-midi.</figcaption>
+            </figure>
+        </div>
+
+        <!-- 04 — Galerie -->
+        <section class="case-gallery" id="galerie" data-toc>
+            <div class="case-section__num reveal">04 — La galerie</div>
+            <h2 class="case-section__title reveal reveal-delay-1">Ce qui n'est pas entré dans le récit.</h2>
+            <div class="case-prose reveal reveal-delay-2">
+                <p>Une sélection silencieuse — des images qui n'ont pas trouvé leur place dans les chapitres mais qui, mises bout à bout, racontent autre chose.</p>
+            </div>
+
+            <div class="case-gallery__grid reveal">
+                <figure class="case-gallery__item case-gallery__item--a">
+                    <img src="/Users/bertinettivalentin/Portefolio/assets/images/latam-argentine/latam-argentine3.png" alt="Horizon patagon au lever du jour" loading="lazy" />
+                </figure>
+                <figure class="case-gallery__item case-gallery__item--b">
+                    <img src="/Users/bertinettivalentin/Portefolio/assets/images/latam-argentine/latam-argentine4.png" alt="Façade de Buenos Aires" loading="lazy" />
+                </figure>
+                <figure class="case-gallery__item case-gallery__item--c">
+                    <img src="/Users/bertinettivalentin/Portefolio/assets/images/latam-argentine/latam-argentine6.png" alt="Côte sauvage" loading="lazy" />
+                </figure>
+                <figure class="case-gallery__item case-gallery__item--d">
+                    <img src="/Users/bertinettivalentin/Portefolio/assets/images/latam-argentine/latam-argentine7.png" alt="Steppe en fin de journée" loading="lazy" />
+                </figure>
+                <figure class="case-gallery__item case-gallery__item--e">
+                    <img src="/Users/bertinettivalentin/Portefolio/assets/images/latam-argentine/latam-argentine9.png" alt="Sommet enneigé au-dessus d'Ushuaïa" loading="lazy" />
+                </figure>
+                <figure class="case-gallery__item case-gallery__item--f">
+                    <img src="/Users/bertinettivalentin/Portefolio/assets/images/latam-argentine/latam-argentine20.png" alt="Portrait d'un éleveur de la pampa" loading="lazy" />
+                </figure>
+            </div>
+        </section>
+
+        <!-- 05 — Matériel -->
+        <section class="case-section" id="materiel" data-toc>
+            <div class="case-section__num reveal">05 — Le carnet de bord</div>
+            <h2 class="case-section__title reveal reveal-delay-1">Léger, mécanique, fidèle au regard.</h2>
+            <div class="case-prose reveal reveal-delay-2">
+                <p>Un sac de 35 litres. Un boîtier APS-C, une seule focale fixe, deux batteries de rechange. Un carnet papier, un crayon, une lampe frontale. C'est tout ce qui a fait le voyage.</p>
+                <p>La règle, sur la route : <strong>ne rien emporter qu'on ne sortira pas tous les jours</strong>. Le 50 mm est resté à Paris. Le 35 a tout fait — paysages, portraits, scènes de rue. Et il a résisté à la poussière de la steppe, au sel de Valdés et à la pluie horizontale d'Ushuaïa, sans broncher.</p>
+            </div>
+        </section>
+
+        <!-- 06 — Stats -->
+        <section class="case-stats" id="chiffres" data-toc>
+            <div class="case-stats__inner">
+                <div class="case-stats__header reveal">
+                    <div class="eyebrow case-stats__eyebrow">06 — En chiffres</div>
+                    <h2 class="case-stats__title">Ce que le voyage a coûté en kilomètres et en lumière.</h2>
+                </div>
+
+                <div class="case-stats__grid">
+                    <div class="case-stat reveal">
+                        <div class="case-stat__num">22</div>
+                        <div class="case-stat__label">Jours sur la route</div>
+                        <p class="case-stat__desc">Du décollage à Paris au retour de Ushuaïa, en passant par quatre escales et près de cinquante heures de bus.</p>
+                    </div>
+                    <div class="case-stat reveal reveal-delay-1">
+                        <div class="case-stat__num">3 700</div>
+                        <div class="case-stat__label">Kilomètres parcourus</div>
+                        <p class="case-stat__desc">Buenos Aires → Puerto Madryn → Río Gallegos → Ushuaïa. La Route 3, dans son entier, et un détroit franchi en ferry.</p>
+                    </div>
+                    <div class="case-stat reveal reveal-delay-2">
+                        <div class="case-stat__num">2 840</div>
+                        <div class="case-stat__label">Déclenchements</div>
+                        <p class="case-stat__desc">Pour 86 images conservées au final. Le ratio habituel quand on photographie d'abord pour soi.</p>
+                    </div>
+                </div>
+
+                <div class="case-stats__footer reveal">
+                    <div class="case-stats__footer-label">Ce que disent les chiffres</div>
+                    <div class="case-stats__footer-text">
+                        <p><strong>3 700 km, 22 jours.</strong> Soit 170 km de moyenne par jour — mais c'est trompeur : les distances se concentrent sur trois trajets de nuit, et le reste du temps on marche, on attend, on regarde.</p>
+                        <p><strong>33 images au kilomètre roulé.</strong> Un déclenchement tous les 1,3 km en moyenne. La Patagonie ne demande pas qu'on appuie souvent — elle demande qu'on appuie au bon moment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 07 — Retour -->
+        <section class="case-section" id="retour" data-toc>
+            <div class="case-section__num reveal">07 — Ce que je retiens</div>
+            <h2 class="case-section__title reveal reveal-delay-1">Le voyage rentre quand on s'arrête.</h2>
+            <div class="case-prose reveal reveal-delay-2">
+                <p>Trois mille sept cents kilomètres, ça paraît beaucoup. Mais c'est dans les heures d'attente — sur un quai de bus à Trelew, sur un banc à Río Gallegos, sur une plage déserte au sud de Comodoro — que le voyage s'est <em>vraiment</em> imprimé.</p>
+                <p>La photographie d'aventure, je la comprends mieux depuis ce voyage : ce n'est pas chercher l'extraordinaire, c'est <strong>accepter le temps long</strong>. Attendre que la lumière revienne. Refaire trois fois le même trajet à pied. Laisser le boîtier dans le sac quand l'image n'y est pas encore.</p>
+                <p>Si je devais refaire la route, je prendrais moins de bus de nuit et plus de bus de jour. On ne photographie pas dans le sommeil — et la steppe, en plein soleil, mérite d'être traversée éveillé.</p>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="case-skills">
+            <div class="case-skills__label reveal">Ce que ce carnet a demandé</div>
+            <ul class="case-skills__list reveal reveal-delay-1">
+                <li class="case-skills__tag">Photographie de voyage</li>
+                <li class="case-skills__tag">Reportage long format</li>
+                <li class="case-skills__tag">Édition &amp; curation</li>
+                <li class="case-skills__tag">Logistique terrain</li>
+                <li class="case-skills__tag">Lecture de paysage</li>
+                <li class="case-skills__tag">Lumière naturelle</li>
+                <li class="case-skills__tag">Sac léger</li>
+                <li class="case-skills__tag">Patience</li>
+            </ul>
+        </section>
+
+        <!-- Carnet suivant -->
+        <section class="case-next">
+            <div class="case-next__inner">
+                <a href="../photography.html#carnets" class="case-next__link" aria-label="Carnet suivant : Dolpo, l'autre Tibet">
+                    <div class="case-next__label">Carnet suivant — 02 / 04</div>
+                    <h2 class="case-next__title">Dolpo, l'autre Tibet</h2>
+                    <p class="case-next__subtitle">Trois semaines de marche dans une vallée fermée de l'Himalaya. Monastères perchés, troupeaux de yaks et lumières d'altitude.</p>
+                    <span class="case-next__arrow">
+                        Découvrir le carnet
+                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M9.5 1L15 6M15 6L9.5 11M15 6H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="../photography.html#carnets" class="case-next__preview" aria-hidden="true">
+                    <img class="case-next__preview-img" src="https://images.unsplash.com/photo-1486911278844-a81c5267e227?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy" />
+                    <span class="case-next__preview-label">Dolpo · Népal · 2023</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer" id="contact">
+        <div class="site-footer__inner">
+            <div>
+                <div class="site-footer__brand-name">Valentin<br>Bertinetti</div>
+                <p class="site-footer__tagline">Product designer &amp; photographe d'aventure, basé à Paris. Disponible pour des missions partout dans le monde.</p>
+            </div>
+            <div>
+                <div class="site-footer__col-title">Univers</div>
+                <ul class="site-footer__list">
+                    <li><a href="../design.html">Product design</a></li>
+                    <li><a href="../photography.html">Photographie</a></li>
+                    <li><a href="../a-propos.html">À propos</a></li>
+                    <li><a href="../design.html#services">Services</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="site-footer__col-title">Contact</div>
+                <ul class="site-footer__list">
+                    <li><a href="mailto:val.bertinetti@gmail.com">val.bertinetti@gmail.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/valentin-bertinetti/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="../index.html">Retour à l'accueil</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="site-footer__bottom">
+            <span>© 2026 Valentin Bertinetti — Tous droits réservés</span>
+            <span>Conçu &amp; codé à la main</span>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" aria-hidden="true" role="dialog" aria-label="Aperçu de l'image" aria-modal="true">
+        <button class="lightbox__close" aria-label="Fermer l'aperçu" type="button">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M5 5L15 15M5 15L15 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <figure class="lightbox__figure">
+            <img class="lightbox__image" src="" alt="" />
+            <figcaption class="lightbox__caption"></figcaption>
+        </figure>
+        <span class="lightbox__hint">ESC pour fermer</span>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Init carte itinéraire -->
+    <script>
+    (function () {
+        if (!window.L) return;
+        const container = document.getElementById('patagonia-map');
+        if (!container) return;
+
+        const stops = [
+            { name: 'Buenos Aires',  coords: [-34.6037, -58.3816], num: '01' },
+            { name: 'Puerto Madryn', coords: [-42.7692, -65.0385], num: '02' },
+            { name: 'Río Gallegos',  coords: [-51.6230, -69.2168], num: '03' },
+            { name: 'Ushuaïa',       coords: [-54.8019, -68.3030], num: '04' }
+        ];
+
+        const map = L.map(container, {
+            scrollWheelZoom: false,
+            zoomControl: true,
+            attributionControl: true
+        });
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 19
+        }).addTo(map);
+
+        // Tracé d'itinéraire
+        const line = L.polyline(stops.map(s => s.coords), {
+            color: '#2D3F32',
+            weight: 2.5,
+            opacity: 0.85,
+            dashArray: '6 6',
+            lineCap: 'round',
+            lineJoin: 'round'
+        }).addTo(map);
+
+        // Marqueurs custom
+        stops.forEach((stop) => {
+            const icon = L.divIcon({
+                className: 'case-map__marker-wrap',
+                html: '<span class="case-map__marker">' + stop.num + '</span>',
+                iconSize: [32, 32],
+                iconAnchor: [16, 16]
+            });
+            L.marker(stop.coords, { icon })
+                .bindPopup('<strong>' + stop.name + '</strong>', { closeButton: false, offset: [0, -8] })
+                .addTo(map);
+        });
+
+        // Cadrer sur l'itinéraire avec un peu de marge
+        map.fitBounds(line.getBounds(), { padding: [40, 40] });
+    })();
+    </script>
+
+    <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

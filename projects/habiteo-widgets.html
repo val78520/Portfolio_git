@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentin Bertinetti - Habiteo Widgets</title>
+    <meta name="description" content="Case study : designer un produit user-centric dans un écosystème piloté par le business. Deux ans en tant que Product Owner & UX Designer chez Habiteo.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;450;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="case">
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="../index.html" class="site-header__brand">
+                Valentin Bertinetti<span class="site-header__brand-mark"> ·</span>
+            </a>
+            <nav class="site-header__nav" aria-label="Navigation principale">
+                <a href="../design.html" class="site-header__link is-active">Design</a>
+                <a href="../photography.html" class="site-header__link site-header__link--secondary">Photographie</a>
+                <a href="../a-propos.html" class="site-header__link site-header__link--secondary">À propos</a>
+                <a href="#contact" class="site-header__link site-header__link--secondary">Contact</a>
+                <a href="#contact" class="site-header__status">
+                    <span class="site-header__status-dot"></span>
+                    <span>Disponible</span>
+                </a>
+                <button class="site-header__burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav-overlay" type="button">
+                    <span class="site-header__burger-line"></span>
+                    <span class="site-header__burger-line"></span>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Overlay menu mobile -->
+        <div class="site-header__overlay" id="site-nav-overlay" aria-hidden="true">
+            <nav class="site-header__overlay-nav" aria-label="Menu mobile">
+                <ul class="site-header__overlay-list">
+                    <li><a href="../design.html" class="site-header__overlay-link is-active"><span class="site-header__overlay-list-num">01</span>Design</a></li>
+                    <li><a href="../photography.html" class="site-header__overlay-link "><span class="site-header__overlay-list-num">02</span>Photographie</a></li>
+                    <li><a href="../a-propos.html" class="site-header__overlay-link "><span class="site-header__overlay-list-num">03</span>À propos</a></li>
+                    <li><a href="#contact" class="site-header__overlay-link"><span class="site-header__overlay-list-num">04</span>Contact</a></li>
+                </ul>
+            </nav>
+            <div class="site-header__overlay-footer">
+                <a href="mailto:val.bertinetti@gmail.com">val.bertinetti@gmail.com</a>
+                <a href="https://www.linkedin.com/in/valentin-bertinetti/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero text-first -->
+        <section class="case-hero">
+            <a href="../design.html" class="case-hero__back">
+                <svg width="14" height="10" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M9.5 1L15 6M15 6L9.5 11M15 6H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Retour aux projets
+            </a>
+
+            <div class="case-hero__eyebrow eyebrow reveal">Case study · Product Design &amp; PO</div>
+
+            <h1 class="case-hero__title reveal reveal-delay-1">Habiteo Widgets</h1>
+
+            <p class="case-hero__subtitle reveal reveal-delay-2">
+                Designer un produit user-centric dans un écosystème piloté par le business.
+            </p>
+
+            <div class="case-hero__meta reveal reveal-delay-3">
+                <div class="case-hero__meta-item">
+                    <span class="case-hero__meta-label">Client</span>
+                    <span class="case-hero__meta-value">Habiteo</span>
+                </div>
+                <div class="case-hero__meta-item">
+                    <span class="case-hero__meta-label">Période</span>
+                    <span class="case-hero__meta-value">2020 — 2022</span>
+                </div>
+                <div class="case-hero__meta-item">
+                    <span class="case-hero__meta-label">Rôle</span>
+                    <span class="case-hero__meta-value">Product Owner &amp; UX Designer</span>
+                </div>
+                <div class="case-hero__meta-item">
+                    <span class="case-hero__meta-label">Durée</span>
+                    <span class="case-hero__meta-value">2 ans</span>
+                </div>
+                <div class="case-hero__meta-item">
+                    <span class="case-hero__meta-label">Équipe</span>
+                    <span class="case-hero__meta-value">Head of Product, Lead dev, équipes Sales</span>
+                </div>
+                <div class="case-hero__meta-item">
+                    <span class="case-hero__meta-label">Outils</span>
+                    <span class="case-hero__meta-value">Figma · Jira · GA · GTM</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cover -->
+        <div class="case-cover reveal">
+            <img class="case-cover__image" src="/Users/bertinettivalentin/Portefolio/assets/images/studio-maquettes3.png" alt="Aperçu des widgets Habiteo en contexte" />
+        </div>
+
+        <!-- TOC compact sticky -->
+        <nav class="case-toc" aria-label="Sommaire">
+            <div class="case-toc__inner">
+                <span class="case-toc__label">Sommaire</span>
+                <ul class="case-toc__list">
+                    <li><a href="#contexte" class="case-toc__link" data-toc-link>Contexte</a></li>
+                    <li><a href="#problematique" class="case-toc__link" data-toc-link>Problématique</a></li>
+                    <li><a href="#discovery" class="case-toc__link" data-toc-link>Discovery</a></li>
+                    <li><a href="#design" class="case-toc__link" data-toc-link>Design</a></li>
+                    <li><a href="#resultats" class="case-toc__link" data-toc-link>Résultats</a></li>
+                    <li><a href="#retro" class="case-toc__link" data-toc-link>Retro</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- 01 — Contexte -->
+        <section class="case-section" id="contexte" data-toc>
+            <div class="case-section__num reveal">01 — Le contexte</div>
+            <h2 class="case-section__title reveal reveal-delay-1">Une expérience de visite à orchestrer entre des contenus 3D riches et des canaux multiples.</h2>
+            <div class="case-prose reveal reveal-delay-2">
+                <p>En 2022, Habiteo était bien établi sur le marché de la production 3D pour l'immobilier neuf — Kaufmann &amp; Broad comptait parmi ses clients. La 3D y est un incontournable : elle permet à l'acheteur de se projeter dans un quartier, un bâtiment ou un logement qui n'existe pas encore.</p>
+                <p>Au sein de l'entreprise, plusieurs équipes coexistaient. La mienne était en charge des <strong>widgets</strong> — ces composants web qui donnent vie aux contenus 3D produits pour chaque programme immobilier : carte de quartier interactive, vue étage du bâtiment, rendus 3D des logements, visites virtuelles. Des contenus riches, gérés par le pôle de production.</p>
+                <p>Le rôle des widgets allait au-delà de l'affichage. Il s'agissait de construire une <em>expérience de visite cohérente</em> entre ces contenus — suffisamment engageante pour transformer un visiteur en lead qualifié, et suffisamment flexible pour que les promoteurs puissent les déployer sur leurs propres canaux : sites web en iframe, réseaux sociaux, rendez-vous clients.</p>
+                <p>C'est dans cet écosystème que j'ai exercé pendant deux ans une <strong>double casquette Product Owner et UX Designer</strong> — un choix assumé, pas subi. Piloter à la fois la vision UX et le delivery produit m'a permis de garder une cohérence bout-en-bout entre ce qui était conçu et ce qui était livré, sans perte de sens entre les deux. Un scope large, mais une position unique pour défendre l'expérience utilisateur jusqu'en production.</p>
+            </div>
+        </section>
+
+        <figure class="case-figure case-figure--full case-figure--green reveal">
+            <div class="case-figure__media">
+                <img class="case-figure__image" src="/Users/bertinettivalentin/Portefolio/assets/images/studio-maquettes4.png" alt="Les widgets Habiteo dans leur écosystème : carte, vue étage, visite virtuelle" loading="lazy" />
+            </div>
+            <figcaption class="case-figure__caption">Quatre widgets — carte de quartier, vue étage, rendus 3D, visite virtuelle — orchestrés en parcours cohérent.</figcaption>
+        </figure>
+
+        <!-- 02 — Problématique (pull quote) -->
+        <section class="case-quote" id="problematique" data-toc>
+            <div class="case-section__num reveal">02 — La problématique</div>
+            <p class="case-quote__text reveal reveal-delay-1">
+                Comment concevoir un produit user-centric quand les décisions sont fortement pilotées par le business&nbsp;?
+            </p>
+        </section>
+
+        <!-- 03 — Discovery -->
+        <section class="case-section" id="discovery" data-toc>
+            <div class="case-section__num reveal">03 — La discovery</div>
+            <h2 class="case-section__title reveal reveal-delay-1">Détecter les problèmes avant de concevoir.</h2>
+            <div class="case-prose reveal reveal-delay-2">
+                <p>Environ <strong>50&nbsp;% de mon activité</strong> était consacrée à la discovery — identifier les frictions, les opportunités d'amélioration, les besoins non adressés — pour alimenter une roadmap dont j'étais garant. Le Head of Product Emmanuel Dupuy assurait l'interface avec la direction et traduisait les orientations stratégiques en vision produit, tout en me laissant une grande liberté sur les choix de priorisation.</p>
+                <p>Trois sources principales structuraient cette phase.</p>
+
+                <h3>#1 — L'audit UX</h3>
+                <p>En auditant régulièrement nos widgets, je générais des épics d'évolution balisées comme sujets UX dans le backlog — des chantiers visant à améliorer l'expérience globale ou à préparer le terrain pour des sujets plus business. Quelques exemples concrets issus de ces audits :</p>
+                <p>— Refonte du système de filtres dans la recherche de logements<br>
+                — Restructuration de la hiérarchie de l'information sur l'ensemble des widgets pour gagner en accessibilité<br>
+                — Refonte de la navigation, jugée trop lourde, pour réduire la charge cognitive et mieux guider l'utilisateur</p>
+
+                <h3>#2 — Les entretiens clients et tests internes</h3>
+                <p>Habiteo était une startup pilotée par le business — la recherche utilisateur n'y était pas une priorité native. Trop coûteuse en temps et en ressources pour être menée dans les règles de l'art, elle aurait pu disparaître du radar. Grâce au sponsoring d'Emmanuel, convaincu de sa valeur dans la phase d'exploration, nous avons mis en place deux formats adaptés au contexte :</p>
+                <p><strong>Interviews clients.</strong> Des entretiens avec des promoteurs sur leurs besoins d'intégration. Une cible sensible, à approcher avec précaution. Ces échanges ont notamment fait remonter la demande de personnalisation graphique des widgets — pour coller au branding des sites promoteurs et rendre les intégrations iframe plus naturelles.</p>
+                <p><strong>Tests et entretiens internes.</strong> À plusieurs reprises, j'ai organisé des sessions guidées avec des collègues pour observer des problèmes de navigation, de compréhension de l'information, ou recueillir du feedback sur des choix visuels. Peu coûteux en outils, nécessitant seulement du temps, ces sessions ont produit des insights qualitatifs précieux — et révélé des frustrations ou idées que les équipes n'auraient pas spontanément remontées autrement.</p>
+            </div>
+        </section>
+
+        <div class="case-grid reveal">
+            <figure class="case-figure case-figure--sand">
+                <div class="case-figure__media">
+                    <img class="case-figure__image" src="https://picsum.photos/seed/habiteo-widgets-audit/900/1100" alt="Audit UX des widgets, capture d'écran annotée" loading="lazy" />
+                </div>
+                <figcaption class="case-figure__caption">Audit UX · Annotations sur la hiérarchie de l'information</figcaption>
+            </figure>
+            <figure class="case-figure case-figure--ivory">
+                <div class="case-figure__media">
+                    <img class="case-figure__image" src="https://picsum.photos/seed/habiteo-widgets-interviews/900/1100" alt="Sessions d'entretien et tests internes" loading="lazy" />
+                </div>
+                <figcaption class="case-figure__caption">Sessions internes · Observations &amp; insights qualitatifs</figcaption>
+            </figure>
+        </div>
+
+        <section class="case-section">
+            <div class="case-prose reveal">
+                <h3>#3 — Le comité Sales/UX</h3>
+                <p>Mensuel, ce comité réunissait les équipes commerciales et moi pour faire remonter de nouveaux sujets terrain et challenger ma priorisation avec leur réalité business. Mon manager l'animait avant de m'en passer le relai — une transmission qui m'a mis en position de faire le lien direct entre la vision produit et les retours du front commercial. Constamment en contact avec les clients, les sales ont été une <strong>source d'alimentation essentielle du backlog</strong>.</p>
+            </div>
+        </section>
+
+        <!-- Callout : À retenir -->
+        <aside class="case-callout reveal">
+            <div class="case-callout__inner">
+                <div class="case-callout__label">À retenir</div>
+                <p class="case-callout__text">
+                    La discovery n'exige pas nécessairement des budgets de recherche conséquents. L'adaptation au contexte et aux moyens d'Habiteo m'a poussé à explorer des formats alternatifs, souvent <em>aussi révélateurs que les approches traditionnelles</em>.
+                </p>
+            </div>
+        </aside>
+
+        <!-- 04 — Design -->
+        <section class="case-section" id="design" data-toc>
+            <div class="case-section__num reveal">04 — Le design</div>
+            <h2 class="case-section__title reveal reveal-delay-1">Concevoir sous contraintes.</h2>
+            <div class="case-prose reveal reveal-delay-2">
+                <p>Les cinquante autres pourcents de mon activité étaient dédiés à la conception. Les widgets Habiteo présentaient des contraintes structurelles qui ont directement façonné les partis pris UX.</p>
+
+                <h3>La contrainte iframe</h3>
+                <p>La principale utilisation des widgets était l'intégration en iframe sur les pages programme des sites promoteurs. Ce contexte introduit une complexité spécifique : <strong>les promoteurs choisissent eux-mêmes la taille de l'iframe et sa gestion responsive</strong>. En plus des versions desktop, tablette et mobile classiques, je concevais donc une version iframe dédiée, avec une hiérarchie de l'information retravaillée, une navigation adaptée, et des fonctionnalités ordonnées par priorité d'usage.</p>
+            </div>
+        </section>
+
+        <figure class="case-figure case-figure--wide case-figure--ember reveal">
+            <div class="case-figure__media">
+                <img class="case-figure__image" src="https://picsum.photos/seed/habiteo-widgets-iframe/1600/1000" alt="Les widgets en intégration iframe, déclinaisons responsive" loading="lazy" />
+            </div>
+            <figcaption class="case-figure__caption">Une version iframe dédiée, en plus du desktop / tablette / mobile — la taille étant choisie par chaque promoteur.</figcaption>
+        </figure>
+
+        <section class="case-section">
+            <div class="case-prose reveal">
+                <h3>La data comme outil de design</h3>
+                <p>Pour ancrer les décisions de conception dans les usages réels plutôt que dans des intuitions, j'ai pris l'initiative de mettre en place un <strong>plan de tracking complet</strong> — en me formant seul à Google Tag Manager via YouTube, puis en le déployant avec l'aide de Christophe Barreto (lead dev) pour la partie technique.</p>
+                <p>Deux exemples illustrent concrètement l'apport de cette démarche :</p>
+                <p><strong>Le tracking des filtres.</strong> Comprendre quels filtres étaient réellement utilisés par les acheteurs m'a permis de prendre des décisions d'interface informées : si un filtre fréquemment utilisé se trouvait en quatrième position dans la hiérarchie, le remonter était une décision <em>justifiée par la data — pas par une intuition</em>.</p>
+                <p><strong>Le tracking du parcours de conversion.</strong> À mon arrivée, la conversion n'était pas mesurée dans l'application. On savait globalement si un utilisateur s'était engagé (visite de contenus 3D, clic sur un contact promoteur), mais sans pouvoir localiser les points de sortie. En instrumentant l'ensemble du parcours avec GTM, j'ai pu identifier les étapes à friction, émettre des hypothèses actionnables, et commencer à <strong>objectiver la valeur business des widgets</strong> en associant une valeur en euros aux clics de conversion remontés dans Google Analytics.</p>
+            </div>
+        </section>
+
+        <figure class="case-figure case-figure--wide case-figure--ink reveal">
+            <div class="case-figure__media">
+                <img class="case-figure__image" src="/Users/bertinettivalentin/Portefolio/assets/images/habiteo-tracking-plan.png" alt="Plan de tracking GTM et tableau de bord analytics" loading="lazy" />
+            </div>
+            <figcaption class="case-figure__caption">Plan de tracking déployé avec GTM — base d'un pilotage par la data qui n'existait pas à l'arrivée.</figcaption>
+        </figure>
+
+        <!-- Callout : Réponse à la problématique -->
+        <aside class="case-callout reveal" id="resultats" data-toc>
+            <div class="case-callout__inner">
+                <div class="case-callout__label">Réponse à la problématique</div>
+                <p class="case-callout__text">
+                    La tension entre vision user-centric et pilotage business ne se résout pas d'un coup. Sur deux ans, j'y ai répondu partiellement : en créant les <strong>conditions organisationnelles</strong> (comité Sales/UX, tracking, audits) pour que la voix de l'utilisateur soit présente dans les décisions, et en livrant des sujets UX aux côtés des demandes business — sans opposer les deux logiques, mais en les <em>faisant coexister</em>.
+                </p>
+            </div>
+        </aside>
+
+        <!-- 05 — Stats -->
+        <section class="case-stats">
+            <div class="case-stats__inner">
+                <div class="case-stats__header reveal">
+                    <div class="eyebrow case-stats__eyebrow">05 — Les résultats</div>
+                    <h2 class="case-stats__title">Deux ans à faire coexister vision UX et pilotage business.</h2>
+                </div>
+
+                <div class="case-stats__grid">
+                    <div class="case-stat reveal">
+                        <div class="case-stat__num">02</div>
+                        <div class="case-stat__label">Ans de double casquette</div>
+                        <p class="case-stat__desc">Product Owner et UX Designer — un scope large pour défendre l'expérience utilisateur jusqu'en production.</p>
+                    </div>
+                    <div class="case-stat reveal reveal-delay-1">
+                        <div class="case-stat__num">3–5</div>
+                        <div class="case-stat__label">Quick wins terrain</div>
+                        <p class="case-stat__desc">Issus du comité Sales/UX, intégrés à la roadmap pour répondre rapidement aux besoins business.</p>
+                    </div>
+                    <div class="case-stat reveal reveal-delay-2">
+                        <div class="case-stat__num">04</div>
+                        <div class="case-stat__label">Chantiers structurants</div>
+                        <p class="case-stat__desc">Refonte navigation, migration framework front, refonte filtres, personnalisation graphique pour les promoteurs.</p>
+                    </div>
+                </div>
+
+                <div class="case-stats__footer reveal">
+                    <div class="case-stats__footer-label">Métriques UX suivies</div>
+                    <div class="case-stats__footer-text">
+                        <p><strong>Taux d'abandon dans les parcours de conversion.</strong> Pour détecter les points de friction et localiser précisément où les utilisateurs décrochaient.</p>
+                        <p><strong>Interactions sur les éléments trackés.</strong> Pour nourrir les décisions d'interface et justifier l'investissement dans le développement de nouvelles features.</p>
+                        <p><strong>Volume de visites mensuel.</strong> Indicateur de santé globale des widgets — dépendant du trafic des sites promoteurs, mais révélateur des tendances du marché.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Note sur le tracking -->
+        <section class="case-section">
+            <div class="case-prose reveal">
+                <p>La mise en place du tracking GTM — initiative personnelle, déployée de zéro — a posé les bases d'un <strong>pilotage par la data</strong> qui n'existait pas à mon arrivée.</p>
+            </div>
+        </section>
+
+        <!-- 06 — Retro -->
+        <section class="case-section" id="retro" data-toc>
+            <div class="case-section__num reveal">06 — Ce que j'aurais fait différemment</div>
+            <h2 class="case-section__title reveal reveal-delay-1">Quatre choses changeraient avec deux ans de recul.</h2>
+            <div class="case-prose reveal reveal-delay-2">
+                <p><strong>Pousser davantage pour la recherche utilisateur.</strong> Je n'avais pas encore les arguments ni la posture pour en défendre l'importance face aux contraintes business. Aujourd'hui, je saurais cadrer cette demande différemment — en montrant son ROI plutôt qu'en la présentant comme un idéal méthodologique.</p>
+                <p><strong>Investir dans l'acculturation au design en interne.</strong> Conduire un changement de culture produit ne se fait pas uniquement par les livrables. J'aurais consacré plus d'énergie à rendre visible la valeur du design — partages d'insights, démos internes, partage des métriques UX avec les équipes.</p>
+                <p><strong>Inclure davantage les stakeholders dans le processus de conception.</strong> Des workshops de co-conception avec les sales, les développeurs ou les clients auraient produit une adhésion plus naturelle aux décisions — et probablement de meilleurs résultats.</p>
+                <p><strong>Tenir davantage la main sur la UI.</strong> J'aurais défendu mes partis pris visuels avec plus d'assurance — en ancrant chaque choix dans des règles d'ergonomie et de design que je maîtrisais, mais que je n'osais pas toujours mettre en avant.</p>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="case-skills">
+            <div class="case-skills__label reveal">Compétences mobilisées</div>
+            <ul class="case-skills__list reveal reveal-delay-1">
+                <li class="case-skills__tag">Conception produit</li>
+                <li class="case-skills__tag">UX Design</li>
+                <li class="case-skills__tag">Discovery &amp; audits UX</li>
+                <li class="case-skills__tag">Recherche utilisateur</li>
+                <li class="case-skills__tag">Wireframing &amp; prototypage Figma</li>
+                <li class="case-skills__tag">Roadmap produit (Jira)</li>
+                <li class="case-skills__tag">Tracking &amp; analytics (GA, GTM)</li>
+                <li class="case-skills__tag">Agile · Sprints</li>
+                <li class="case-skills__tag">Animation de comité transverse</li>
+                <li class="case-skills__tag">Coordination Sales / Design / Dev</li>
+            </ul>
+        </section>
+
+        <!-- Next project -->
+        <section class="case-next">
+            <div class="case-next__inner">
+                <a href="renault-group.html" class="case-next__link" aria-label="Projet suivant : Renault Group">
+                    <div class="case-next__label">Projet suivant — 01 / 04</div>
+                    <h2 class="case-next__title">Renault Group</h2>
+                    <p class="case-next__subtitle">Porter la voix de l'UX dans un programme de transformation industrielle — trois ans à acculturer les équipes métier et adapter la méthode au terrain.</p>
+                    <span class="case-next__arrow">
+                        Découvrir le projet
+                        <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M9.5 1L15 6M15 6L9.5 11M15 6H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="renault-group.html" class="case-next__preview" aria-hidden="true">
+                    <img class="case-next__preview-img" src="https://picsum.photos/seed/renault-group-next/600/750?blur=8" alt="" loading="lazy" />
+                    <span class="case-next__preview-label">Renault Group · 2022 — en cours</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer" id="contact">
+        <div class="site-footer__inner">
+            <div>
+                <div class="site-footer__brand-name">Valentin<br>Bertinetti</div>
+                <p class="site-footer__tagline">Product designer &amp; photographe d'aventure, basé à Paris. Disponible pour des missions partout dans le monde.</p>
+            </div>
+            <div>
+                <div class="site-footer__col-title">Univers</div>
+                <ul class="site-footer__list">
+                    <li><a href="../design.html">Product design</a></li>
+                    <li><a href="../photography.html">Photographie</a></li>
+                    <li><a href="../a-propos.html">À propos</a></li>
+                    <li><a href="../design.html#services">Services</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="site-footer__col-title">Contact</div>
+                <ul class="site-footer__list">
+                    <li><a href="mailto:val.bertinetti@gmail.com">val.bertinetti@gmail.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/valentin-bertinetti/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="../index.html">Retour à l'accueil</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="site-footer__bottom">
+            <span>© 2026 Valentin Bertinetti — Tous droits réservés</span>
+            <span>Conçu &amp; codé à la main</span>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" aria-hidden="true" role="dialog" aria-label="Aperçu de l'image" aria-modal="true">
+        <button class="lightbox__close" aria-label="Fermer l'aperçu" type="button">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M5 5L15 15M5 15L15 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <figure class="lightbox__figure">
+            <img class="lightbox__image" src="" alt="" />
+            <figcaption class="lightbox__caption"></figcaption>
+        </figure>
+        <span class="lightbox__hint">ESC pour fermer</span>
+    </div>
+
+    <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
