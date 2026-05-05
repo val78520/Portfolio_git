@@ -222,13 +222,13 @@ h1, h2, h3, h4, h5 {
 
 .split__half--design .split__media {
     background-image: linear-gradient(135deg, #2D3F32 0%, #4A6B52 100%),
-                      url("/Users/bertinettivalentin/Portefolio/assets/images/threepercent.png");
+                      url("../images/threepercent.png");
     background-blend-mode: multiply;
-    background-image: url("/Users/bertinettivalentin/Portefolio/assets/images/threepercent.png");
+    background-image: url("../images/threepercent.png");
 }
 
 .split__half--photo .split__media {
-    background-image: url('/Users/bertinettivalentin/Portefolio/assets/images/salkantay.jpg');
+    background-image: url('../images/salkantay.jpg');
 }
 
 .split__half:hover {
