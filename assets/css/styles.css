@@ -830,10 +830,6 @@ h1, h2, h3, h4, h5 {
     transform: translate(0, -50%) scale(1);
 }
 @media (max-width: 900px) {
-    .pindex__item {
-        display: flex;
-        flex-direction: column;
-    }
     .pindex__item:hover .pindex__link {
         padding-left: 0;
         color: var(--color-forest-deep);
@@ -874,7 +870,6 @@ h1, h2, h3, h4, h5 {
         max-width: none;
     }
     .pindex__preview {
-        order: -1;
         position: static;
         opacity: 1;
         transform: none;
@@ -4114,7 +4109,7 @@ body.menu-open {
 
 /* Quand le menu est ouvert, le header reste au-dessus de l'overlay */
 body.menu-open .site-header {
-    background: transparent;
+    background: var(--color-ivory);
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     border-bottom-color: transparent;
